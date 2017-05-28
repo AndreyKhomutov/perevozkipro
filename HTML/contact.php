@@ -8,7 +8,7 @@
  */
 
 // please change this to your E-Mail address
-$sendTo = "support@pixel-industry.com";
+$sendTo = "khomutov86@gmail.com";
 
 $action = $_POST['action'];
 if ($action == 'contact') {
