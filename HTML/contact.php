@@ -24,10 +24,10 @@ if ($action == 'contact') {
     }
     
     $message = 'Тема сообщения: ' . $inquiry . "\r\n"
-                        . "Name: " . $name . "\r\n"
-                        . "Last Name: " . $lastname . "\r\n"
-                        . "Email: " . $email . "\r\n"
-                        . "Message: " . $contact_message . "\r\n";
+                        . "Имя: " . $name . "\r\n"
+                        . "Фамилия: " . $lastname . "\r\n"
+                        . "Почта: " . $email . "\r\n"
+                        . "Сообщение: " . $contact_message . "\r\n";
 } else if ($action == 'newsletter') {
     $email = $_POST['form_data'][0]['Email'];
     $name = $email;
@@ -66,12 +66,12 @@ if ($action == 'contact') {
         exit();
     }
     
-    $message = "Driver name: " . $driver_name . "\r\n"
-            . "Driver last name: " . $driver_last_name . "\r\n"
-            . "Date of birth: " . $driver_birth_date . "\r\n"
-            . "You are: " . $driver_type . "\r\n"
-            . "Phone number: " . $phone_number . "\r\n"
-            . "Driver experience: " . $driver_experience . "\r\n";
+    $message = "Имя: " . $driver_name . "\r\n"
+            . "Фамилия: " . $driver_last_name . "\r\n"
+            . "Дата рождения: " . $driver_birth_date . "\r\n"
+            . "Должность: " . $driver_type . "\r\n"
+            . "Телефон: " . $phone_number . "\r\n"
+            . "Опыт работы: " . $driver_experience . "\r\n";
 }
 else if ($action == 'shipping') {
     $tracking_origin = $_POST['form_data'][0]['origin_zip'];
