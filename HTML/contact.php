@@ -19,22 +19,21 @@ if ($action == 'contact') {
     $contact_message = $_POST['form_data'][0]['message'];
 
     if ($name == "" || $email == "" || $contact_message == "") {
-        echo "There was problem while sending E-Mail. Please verify entered data and try again!";
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
     
-    $message = 'Inquiry: ' . $inquiry . "\r\n"
+    $message = 'Тема сообщения: ' . $inquiry . "\r\n"
                         . "Name: " . $name . "\r\n"
                         . "Last Name: " . $lastname . "\r\n"
                         . "Email: " . $email . "\r\n"
-                        . "Subject: " . $subject . "\r\n"
                         . "Message: " . $contact_message . "\r\n";
 } else if ($action == 'newsletter') {
     $email = $_POST['form_data'][0]['Email'];
     $name = $email;
 
     if ($email == "") {
-        echo "There was problem while sending E-Mail. Please verify entered data and try again!";
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
     $subject = 'Newsletter Subscribe!';
@@ -47,7 +46,7 @@ if ($action == 'contact') {
     $subject = 'New comment!';
     
     if ($name == "" || $email == "" || $message == "") {
-        echo "There was problem while sending E-Mail. Please verify entered data and try again!";
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
     
@@ -59,14 +58,11 @@ if ($action == 'contact') {
     $driver_last_name = $_POST['form_data'][0]['driver_last_name'];
     $driver_birth_date = $_POST['form_data'][0]['date_of_birth'];
     $driver_type = $_POST['form_data'][0]['driver_type'];
-    $licence_period = $_POST['form_data'][0]['licence_period'];
-    $licence_type = $_POST['form_data'][0]['licence_type'];
     $phone_number = $_POST['form_data'][0]['phone_number'];
-    $cell_number = $_POST['form_data'][0]['cell_number'];
     $driver_experience = $_POST['form_data'][0]['driver_experience'];
 
     if ($driver_name == "" || $driver_last_name == "" || $driver_experience == "") {
-        echo "There was problem while sending E-Mail. Please verify entered data and try again!";
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
     
@@ -74,11 +70,8 @@ if ($action == 'contact') {
             . "Driver last name: " . $driver_last_name . "\r\n"
             . "Date of birth: " . $driver_birth_date . "\r\n"
             . "You are: " . $driver_type . "\r\n"
-            . "Licence period: " . $licence_period . "\r\n"
-            . "licence_type: " . $licence_type . "\r\n"
             . "Phone number: " . $phone_number . "\r\n"
-            . "Cell number: " . $cell_number . "\r\n"
-            . "Driver experience: " . $driver_experience . "\r\n"; 
+            . "Driver experience: " . $driver_experience . "\r\n";
 }
 else if ($action == 'shipping') {
     $tracking_origin = $_POST['form_data'][0]['origin_zip'];
@@ -88,7 +81,7 @@ else if ($action == 'shipping') {
     $tracking_email = $_POST['form_data'][0]['email'];
     
     if ($tracking_origin == "" || $tracking_destination == "" || $tracking_email == "") {
-        echo "There was problem while sending E-Mail. Please verify entered data and try again!";
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
     
@@ -104,7 +97,7 @@ $headers = 'From: ' . $name . '<' . $email . ">\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
 if (mail($sendTo, $subject, $message, $headers)) {
-    echo "Message sent succesfully.";
+    echo "Сообщение успешно отправлено.";
 } else {
     echo "There was problem while sending E-Mail.";
 }

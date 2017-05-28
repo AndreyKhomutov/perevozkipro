@@ -202,19 +202,19 @@
                             <fieldset>
                                 <label><span class="required">*</span> Фамилия:</label>
 
-                                <input type="text" class="wpcf7-text" id="driver-name">
+                                <input type="text" class="wpcf7-text" id="driver-name" autocomplete="off">
                             </fieldset>
 
                             <fieldset>
                                 <label><span class="required">*</span> Имя:</label>
 
-                                <input type="text" class="wpcf7-text" id="driver-last-name">
+                                <input type="text" class="wpcf7-text" id="driver-last-name"  autocomplete="off">
                             </fieldset>
 
                             <fieldset>
                                 <label><span class="required">*</span> Дата рождения:</label>
 
-                                <input type="text" class="wpcf7-text" id="driver-date-birth" placeholder="mm/dd/yy">
+                                <input type="text" class="wpcf7-text" id="driver-date-birth" placeholder="mm/dd/yy"  autocomplete="off">
                             </fieldset>
 
                             <fieldset>
@@ -227,33 +227,15 @@
                             </fieldset>
 
                             <fieldset>
-                                <label><span class="required">*</span> Дата окончания водительского удостоверения:</label>
-
-                                <input class="wpcf7-text" id="driver-licence-period">
-                            </fieldset>
-
-                            <fieldset>
-                                <label><span class="required">*</span> Водительские категории:</label>
-
-                                <input class="wpcf7-text" id="driver-licence-type">
-                            </fieldset>
-
-                            <fieldset>
                                 <label><span class="required">*</span> Ваш телефон:</label>
 
-                                <input class="wpcf7-text" id="driver-phone">
-                            </fieldset>
-
-                            <fieldset>
-                                <label><span class="required">*</span> Ваш мобильный телефон:</label>
-
-                                <input class="wpcf7-text" id="driver-cell">
+                                <input class="wpcf7-text" id="driver-phone"  autocomplete="off">
                             </fieldset>
 
                             <fieldset>
                                 <label><span class="required">*</span> Опыт работы (лет):</label>
 
-                                <input class="wpcf7-text" id="driver-experience" placeholder="Минимум 3...">
+                                <input class="wpcf7-text" id="driver-experience" placeholder="Минимум 3..."  autocomplete="off">
                             </fieldset>
 
                             <input type="submit" class="wpcf7-submit" value="отправить">
@@ -365,12 +347,9 @@
                     var driver_last_name = $('#driver-last-name').val();
                     var driver_birth_date = $('#driver-date-birth').val();
                     var driver_type = $('#driver-type option:selected').text();
-                    var licence_period = $('#driver-licence-period').val();
-                    var licence_type = $('#driver-licence-type').val();
                     var phone_number = $('#driver-phone').val();
-                    var cell_number = $('#driver-cell').val();
                     var driver_experience = $('#driver-experience').val();
-                    var form_data = new Array({'driver_name': driver_name, 'driver_last_name': driver_last_name, 'date_of_birth': driver_birth_date, 'Ydriver_type': driver_type, 'licence_period': licence_period, 'licence_type': licence_type, 'phone_number': phone_number, 'cell_number': cell_number, 'driver_experience': driver_experience});
+                    var form_data = new Array({'driver_name': driver_name, 'driver_last_name': driver_last_name, 'date_of_birth': driver_birth_date, 'driver_type': driver_type, 'phone_number': phone_number, 'driver_experience': driver_experience});
                     $.ajax({
                         type: 'POST',
                         url: "contact.php",
