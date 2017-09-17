@@ -187,29 +187,35 @@
                         <h2>ПЕРВЫЕ 100 КМ НЕГАБАРИТНОЙ ПЕРЕВОЗКИ - БЕСПЛАТНО!*</h2>
                         <h4>ПОЛУЧИТЕ БЕСПЛАТНЫЙ ПРОСЧЕТ ПЕРЕВОЗКИ ГРУЗА</h4>
                         <h4>В течении 15 минут специалист рассчитает ставку и наличие машин в районе погрузки!</h4>
-                        <form>
-                            <div class="row" style="margin-bottom: 0;">
-                                <div class="col-md-6" style="text-align: center">
-                                    <div class="row" style="margin-bottom: 0;">
-                                        <div class="col-md-6">
-                                            <label>Груз весит более 38 тонн</label> <br>
-                                            <label>Неоходима погрузка/выгрузка</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="submit" value="РАССЧИТАТЬ">
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-bottom: 0;">
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Тип груза">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Ориентировачная дата перевозки">
+                        <div class="col-md-6" style="background: antiquewhite;color: black">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-xs-offset-4 col-xs-8">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" id="inputWedth"><strong>Груз весит более 38 тонн</strong></label>&nbsp;&nbsp;
+                                            <label><input type="checkbox" id="inputLanding"><strong>Необходима погрузка/выгрузка</strong></label>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="form-group">
+                                    <label for="inputType" class="col-xs-4 control-label"><strong>Тип груза:</strong></label>
+                                    <div class="col-xs-8">
+                                        <input type="text" class="form-control" id="inputType" placeholder="Например: Бетонный модуль" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputDate" class="col-xs-4 control-label"><strong>Ориентировачная дата перевозки:</strong></label>
+                                    <div class="col-xs-8">
+                                        <input type="text" class="form-control" id="inputDate" placeholder="10 сентября 2017" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-offset-2 col-xs-10">
+                                        <button type="submit" class="navbar-left" style="background-color: dodgerblue;" >Продолжить рассчет</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="row">
