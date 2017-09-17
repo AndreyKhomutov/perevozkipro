@@ -16,7 +16,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/bootstrap.css"/><!-- bootstrap grid -->
+        <!--<link rel="stylesheet" href="css/bootstrap.css"/>&lt;!&ndash; bootstrap grid &ndash;&gt;-->
+        !-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
         <link rel="stylesheet" href="css/color-default.css"/><!-- template main color -->
         <link rel="stylesheet" href="css/retina.css"/><!-- retina ready styles -->
@@ -188,7 +190,7 @@
                         <h4>ПОЛУЧИТЕ БЕСПЛАТНЫЙ ПРОСЧЕТ ПЕРЕВОЗКИ ГРУЗА</h4>
                         <h4>В течении 15 минут специалист рассчитает ставку и наличие машин в районе погрузки!</h4>
                         <div class="col-md-6" style="background: antiquewhite;color: black">
-                            <form class="form-horizontal">
+                            <form id="formNegabarit" class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-xs-offset-4 col-xs-8">
                                         <div class="checkbox">
@@ -206,22 +208,18 @@
                                 <div class="form-group">
                                     <label for="inputDate" class="col-xs-4 control-label"><strong>Ориентировачная дата перевозки:</strong></label>
                                     <div class="col-xs-8">
-                                        <input type="text" class="form-control" id="inputDate" placeholder="10 сентября 2017" required>
+                                        <input type="text" class="form-control" id="inputDate" onclick="validateForm()" placeholder="10 сентября 2017" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-offset-2 col-xs-10">
-                                        <button type="submit" class="navbar-left" style="background-color: dodgerblue;" >Продолжить рассчет</button>
+                                        <button type="button" data-toggle="modal" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
+                                        <button type="button"class="navbar-left" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalForm">
-                        Open Contact Form
-                    </button>
-
 
                     <div class="modal fade" id="modalForm" role="dialog" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog">
@@ -257,7 +255,7 @@
                                 <!-- Modal Footer -->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary submitBtn" onclick="submitContactForm()">SUBMIT</button>
+                                    <button type="button" id="submit" class="btn btn-primary submitBtn" >SUBMIT</button>
                                 </div>
                             </div>
                         </div>
@@ -512,7 +510,11 @@
 
 
         <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
-        <script src="js/bootstrap.min.js"></script><!-- .bootstrap script -->
+        <!--<script src="js/bootstrap.min.js"></script>&lt;!&ndash; .bootstrap script &ndash;&gt;-->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
         <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->  
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
@@ -551,5 +553,17 @@
         <script type="text/javascript">
             InitClick2Call();
         </script>
+    <script>
+        $('#submit').click(function(){
+            /* when the submit button in the modal is clicked, submit the form */
+            alert('submitting');
+            $('#formNegabarit').submit();
+        });
+        function validateForm(){
+            alert('123');
+            alert($('#formNegabarit').isValid());
+        }
+    </script>
+
     </body>
 </html>
