@@ -240,18 +240,18 @@
                                 <!-- Modal Body -->
                                 <div class="modal-body">
                                     <p class="statusMsg"></p>
-                                    <form role="form">
+                                    <form role="form" id="modalContactForm">
                                         <div class="form-group">
-                                            <label for="inputName">Name</label>
-                                            <input class="form-control" id="inputName" placeholder="Enter your name" type="text">
+                                            <label for="modalName">Name</label>
+                                            <input class="form-control" id="modalName" name="modalName" placeholder="Enter your name" type="text" autocomplete="off">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputEmail">Email</label>
-                                            <input class="form-control" id="inputEmail" placeholder="Enter your email" type="email">
+                                            <label for="modalEmail">Email</label>
+                                            <input class="form-control" id="modalEmail" name="modalEmail" placeholder="Enter your email" type="email" autocomplete="off">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputMessage">Message</label>
-                                            <textarea class="form-control" id="inputMessage" placeholder="Enter your message"></textarea>
+                                            <label for="modalMessage">Message</label>
+                                            <textarea class="form-control" id="modalMessage" name="modalMessage" placeholder="Enter your message" autocomplete="off"></textarea>
                                         </div>
                                     </form>
                                 </div>
@@ -536,6 +536,13 @@
                     inputType: "Поле не заполнено"
                 }
             });
+            $('#modalContactForm').validate({
+                rules: {
+                    modalName: {required: '#modalName:visible'},
+                    modalEmail: {required: '#modalEmail:visible'},
+                    modalMessage: {required: '#modalMessage:visible'}
+                }
+            });
         </script>
             <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
@@ -574,9 +581,10 @@
         </script>
     <script>
         $('#submit').click(function(){
-            /* when the submit button in the modal is clicked, submit the form */
-            alert('submitting');
-            $('#formNegabarit').submit();
+            var form = $( "#modalContactForm" );
+            if (form.valid()){
+                $('#formNegabarit').submit();
+            }
         });
         function validateForm(){
             var form = $( "#formNegabarit" );
