@@ -30,6 +30,11 @@
 
         <!-- Font icons -->
         <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css -->
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
     </head>
 
     <body>
@@ -202,21 +207,20 @@
                                 <div class="form-group">
                                     <label for="inputType" class="col-xs-4 control-label"><strong>Тип груза:</strong></label>
                                     <div class="col-xs-8">
-                                        <input type="text" class="form-control" id="inputType" placeholder="Например: Бетонный модуль" required>
+                                        <input type="text" class="form-control" id="inputType" name="inputType" placeholder="Например: Бетонный модуль" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDate" class="col-xs-4 control-label"><strong>Ориентировачная дата перевозки:</strong></label>
                                     <div class="col-xs-8">
-                                        <input type="text" class="form-control" id="inputDate" onclick="validateForm()" placeholder="10 сентября 2017" required>
+                                        <input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="10 сентября 2017"  autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-offset-2 col-xs-10">
-                                        <button type="button" data-toggle="modal" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
-                                        <button type="button"class="navbar-left" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
+                                <br>
+                                <div class="col-xs-offset-2 col-xs-10">
+                                        <button type="button" data-toggle="modal" id="modalButton" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
+                                        <button type="button" class="navbar-left" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
                                     </div>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -518,7 +522,22 @@
         <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->  
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
-        <!-- Yandex.Metrika counter -->
+        <!--Jquery validator-->
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script>
+            $('#formNegabarit').validate({
+                rules: {
+                    inputDate: {required: '#inputDate:visible'},
+                    inputType: {required: '#inputType:visible'}
+                },
+                messages: {
+                    inputDate: "Поле не заполнено",
+                    inputType: "Поле не заполнено"
+                }
+            });
+        </script>
+            <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
             (function (d, w, c) {
                 (w[c] = w[c] || []).push(function() {
@@ -560,7 +579,10 @@
             $('#formNegabarit').submit();
         });
         function validateForm(){
-            alert('123');
+            var form = $( "#formNegabarit" );
+            if (form.valid()){
+                $( "#modalButton" ).click();
+            }
         }
     </script>
 
