@@ -38,22 +38,46 @@ if ($action == 'contact') {
     }
     $subject = 'Newsletter Subscribe!';
     $message = 'Newsletter Subscribe for User: ' . $email;
+} else if ($action == 'negabarit') {
+    $modalName = $_POST['form_data'][0]['modalName'];
+    $modalEmail = $_POST['form_data'][0]['modalEmail'];
+    $modalMessage = $_POST['form_data'][0]['modalMessage'];
+    $date = $_POST['form_data'][0]['date'];
+    $type = $_POST['form_data'][0]['type'];
+
+    $inputWedth = $_POST['form_data'][0]['inputWedth'];
+    $inputLanding = $_POST['form_data'][0]['inputLanding'];
+    // you can change default Subject for comment form here
+    $subject = 'New comment!';
+    
+    if ($modalName == "" || $modalEmail == "" || $modalMessage == ""  || $type == ""  || $date == "") {
+        echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
+        exit();
+    }
+    
+    $message = "Имя: " . $modalName . "\r\n"
+                . "Электронная почта: " . $modalEmail . "\r\n"
+                . "Ориентировачная дата перевозки: " . $date . "\r\n"
+                . "Тип груза: " . $type . "\r\n"
+                . "Необходима погрузка/выгрузка: " . $inputLanding . "\r\n"
+                . "Груз весит более 38 тонн   : " . $inputWedth . "\r\n"
+                . "Сообщение: " . $modalMessage . "\r\n";
 } else if ($action == 'comment') {
     $name = $_POST['form_data'][0]['Name'];
     $email = $_POST['form_data'][0]['Email'];
     $message = $_POST['form_data'][0]['Message'];
     // you can change default Subject for comment form here
     $subject = 'New comment!';
-    
+
     if ($name == "" || $email == "" || $message == "") {
         echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
-    
+
     $message = "Name: " . $name . "\r\n"
-                . "Email: " . $email . "\r\n"
-                . "Message: " . $message . "\r\n";
-}else if ($action == 'driverApp'){
+        . "Email: " . $email . "\r\n"
+        . "Message: " . $message . "\r\n";
+} else if ($action == 'driverApp'){
     $driver_name = $_POST['form_data'][0]['driver_name'];
     $driver_last_name = $_POST['form_data'][0]['driver_last_name'];
     $driver_birth_date = $_POST['form_data'][0]['date_of_birth'];

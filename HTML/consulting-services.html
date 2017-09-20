@@ -587,12 +587,25 @@
             var form = $( "#modalContactForm" );
             if (form.valid()){
                 var modalName=$('#modalName').val();
-                $('#fromModalName').val(modalName);
                 var modalEmail=$('#modalEmail').val();
-                $('#fromModalEmail').val(modalEmail);
                 var modalMessage=$('#modalMessage').val();
-                $('#fromModalMessage').val(modalMessage);
-                $('#formNegabarit').submit();
+                var date=$('#inputDate').val();
+                var type=$('#inputType').val();
+
+                var inputWedth=$('#inputWedth').val();
+                var inputLanding=$('#inputLanding').val();
+
+                var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail,
+                    'modalMessage': modalMessage, 'date':date, 'type': type, 'inputWedth':inputWedth, 'inputLanding': inputLanding});
+                $.ajax({
+                    type: 'POST',
+                    url: "contact.php",
+                    data: ({'action': 'negabarit', 'form_data': form_data})
+                }).done(function (data) {
+                    alert(data);
+                });
+
+//                $('#formNegabarit').submit();
             }
         });
         function validateForm(){
