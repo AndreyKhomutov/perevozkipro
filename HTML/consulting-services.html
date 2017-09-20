@@ -196,6 +196,9 @@
                         <h4>В течении 15 минут специалист рассчитает ставку и наличие машин в районе погрузки!</h4>
                         <div class="col-md-6" style="background: antiquewhite;color: black">
                             <form id="formNegabarit" class="form-horizontal">
+                                <input type="hidden" name="fromModalName" id="fromModalName" value="">
+                                <input type="hidden" name="fromModalEmail" id="fromModalEmail" value="">
+                                <input type="hidden" name="fromModalMessage" id="fromModalMessage" value="">
                                 <div class="form-group">
                                     <div class="col-xs-offset-4 col-xs-8">
                                         <div class="checkbox">
@@ -583,6 +586,12 @@
         $('#submit').click(function(){
             var form = $( "#modalContactForm" );
             if (form.valid()){
+                var modalName=$('#modalName').val();
+                $('#fromModalName').val(modalName);
+                var modalEmail=$('#modalEmail').val();
+                $('#fromModalEmail').val(modalEmail);
+                var modalMessage=$('#modalMessage').val();
+                $('#fromModalMessage').val(modalMessage);
                 $('#formNegabarit').submit();
             }
         });
