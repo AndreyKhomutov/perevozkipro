@@ -192,20 +192,21 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>ПЕРВЫЕ 100 КМ НЕГАБАРИТНОЙ ПЕРЕВОЗКИ - БЕСПЛАТНО!*</h2>
-                        <h4>ПОЛУЧИТЕ БЕСПЛАТНЫЙ ПРОСЧЕТ ПЕРЕВОЗКИ ГРУЗА</h4>
+                        <h4>ПОЛУЧИТЕ РАСЧЕТ СТОИМОСТИ ПЕРЕВОЗКИ ГРУЗА</h4>
                         <h4>В течении 15 минут специалист рассчитает ставку и наличие машин в районе погрузки!</h4>
-                        <div class="col-md-6" style="background: antiquewhite;color: black">
+                        <div class="col-md-6" style="background: antiquewhite;color: black;
+                        margin-left: 150px; margin-bottom: 20px;padding: 20px">
                             <form id="formNegabarit" class="form-horizontal">
                                 <input type="hidden" name="fromModalName" id="fromModalName" value="">
                                 <input type="hidden" name="fromModalEmail" id="fromModalEmail" value="">
                                 <input type="hidden" name="fromModalMessage" id="fromModalMessage" value="">
                                 <div class="form-group">
-                                    <div class="col-xs-offset-4 col-xs-8">
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" id="inputWedth"><strong>Груз весит более 38 тонн</strong></label>&nbsp;&nbsp;
-                                            <label><input type="checkbox" id="inputLanding"><strong>Необходима погрузка/выгрузка</strong></label>
-                                        </div>
-                                    </div>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inputWedth" value="">Груз весит более 38 тонн
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" value="" id="inputLanding">Необходима погрузка/выгрузка
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputType" class="col-xs-4 control-label"><strong>Тип груза:</strong></label>
@@ -222,7 +223,7 @@
                                 <br>
                                 <div class="col-xs-offset-2 col-xs-10">
                                         <button type="button" data-toggle="modal" id="modalButton" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
-                                        <button type="button" class="navbar-left" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
+                                        <button type="button" class="navbar-left btn btn-success btn-lg" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
                                     </div>
                             </form>
                         </div>
@@ -237,32 +238,49 @@
                                         <span aria-hidden="true">×</span>
                                         <span class="sr-only">Close</span>
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Расчет стоимости перевозки</h4>
                                 </div>
 
                                 <!-- Modal Body -->
                                 <div class="modal-body">
                                     <p class="statusMsg"></p>
                                     <form role="form" id="modalContactForm">
+                                       <h5>
+                                           Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
+                                           цен на топливо, погодных условий, состояния дорог на маршруте и тд.
+                                          <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
+                                       </h5>
                                         <div class="form-group">
-                                            <label for="modalName">Name</label>
-                                            <input class="form-control" id="modalName" name="modalName" placeholder="Enter your name" type="text" autocomplete="off">
+                                            <label for="modalName"><strong>Адрес</strong></label>
+                                            <input class="form-control" id="modalName" name="modalName"
+                                                   placeholder="Где будет погрузка и выгрузка: Москва - Санкт-петербург" type="text" autocomplete="off">
                                         </div>
                                         <div class="form-group">
-                                            <label for="modalEmail">Email</label>
-                                            <input class="form-control" id="modalEmail" name="modalEmail" placeholder="Enter your email" type="email" autocomplete="off">
+                                            <label for="modalMessage"><strong>Подробности</strong></label>
+                                            <textarea class="form-control" id="modalMessage" name="modalMessage"
+                                                      placeholder="Например: негабарит ширина 4,7м" autocomplete="off"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="modalMessage">Message</label>
-                                            <textarea class="form-control" id="modalMessage" name="modalMessage" placeholder="Enter your message" autocomplete="off"></textarea>
+                                            <label for="modalPhone"><strong>Телефон</strong></label>
+                                            <input class="form-control" id="modalPhone" name="modalPhone"
+                                                   placeholder="Ваш номер телефона для связи" type="tel" autocomplete="off">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="modalEmail"><strong>Email</strong></label>
+                                            <input class="form-control" id="modalEmail" name="modalEmail" placeholder="Ваша эл. почта" type="email" autocomplete="off">
+                                        </div>
+
+                                        <h5>
+                                            Специалист свяжется с Вами 30 минут для уточнения информации по грузу, либо с готовым предложением по перевозке.
+                                            <br><br>
+                                            Прямой заказ грузоперевозки по телефону 8 (812) 649-45-30
+                                            Запрос коммерческого предложения на почту info@перевозкипро.рф
+                                        </h5>
                                     </form>
                                 </div>
-
                                 <!-- Modal Footer -->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" id="submit" class="btn btn-primary submitBtn" >SUBMIT</button>
+                                    <button type="button" id="submit" class="btn btn-success btn-lg" >ОТПРАВИТЬ</button>
                                 </div>
                             </div>
                         </div>
@@ -543,7 +561,14 @@
                 rules: {
                     modalName: {required: '#modalName:visible'},
                     modalEmail: {required: '#modalEmail:visible'},
-                    modalMessage: {required: '#modalMessage:visible'}
+                    modalMessage: {required: '#modalMessage:visible'},
+                    modalPhone: {required: '#modalPhone:visible'}
+                },
+                messages: {
+                    modalName: "Поле не заполнено",
+                    modalEmail: "Поле не заполнено",
+                    modalMessage: "Поле не заполнено",
+                    modalPhone: "Поле заполнено не верно"
                 }
             });
         </script>
