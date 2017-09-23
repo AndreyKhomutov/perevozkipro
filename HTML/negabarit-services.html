@@ -270,7 +270,7 @@
                                         <div class="form-group">
                                             <label for="modalPhone"><strong>Телефон</strong></label>
                                             <input class="form-control" id="modalPhone" name="modalPhone"
-                                                   placeholder="Ваш номер телефона для связи" type="tel" autocomplete="off">
+                                                   placeholder="Ваш номер телефона для связи (+7(999)999-99-99)" type="tel" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label for="modalEmail"><strong>Email</strong></label>
@@ -534,30 +534,34 @@
         <!--Jquery validator-->
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script type="text/javascript" src="js/jquery.inputmask.js"></script>
         <script>
-            $('#formNegabarit').validate({
-                rules: {
-                    inputDate: {required: '#inputDate:visible'},
-                    inputType: {required: '#inputType:visible'}
-                },
-                messages: {
-                    inputDate: "Поле не заполнено",
-                    inputType: "Поле не заполнено"
-                }
-            });
-            $('#modalContactForm').validate({
-                rules: {
-                    modalName: {required: '#modalName:visible'},
-                    modalEmail: {required: '#modalEmail:visible'},
-                    modalMessage: {required: '#modalMessage:visible'},
-                    modalPhone: {required: '#modalPhone:visible'}
-                },
-                messages: {
-                    modalName: "Поле не заполнено",
-                    modalEmail: "Поле заполнено не верно",
-                    modalMessage: "Поле не заполнено",
-                    modalPhone: "Поле не заполнено"
-                }
+            $(document).ready(function() {
+                $('#formNegabarit').validate({
+                    rules: {
+                        inputDate: {required: '#inputDate:visible'},
+                        inputType: {required: '#inputType:visible'}
+                    },
+                    messages: {
+                        inputDate: "Поле не заполнено",
+                        inputType: "Поле не заполнено"
+                    }
+                });
+                $('#modalContactForm').validate({
+                    rules: {
+                        modalName: {required: '#modalName:visible'},
+                        modalEmail: {required: '#modalEmail:visible'},
+                        modalMessage: {required: '#modalMessage:visible'},
+                        modalPhone: {required: '#modalPhone:visible'}
+                    },
+                    messages: {
+                        modalName: "Поле не заполнено",
+                        modalEmail: "Поле заполнено не верно",
+                        modalMessage: "Поле не заполнено",
+                        modalPhone: "Поле не заполнено"
+                    }
+                });
+                $("#modalPhone").inputmask("+7(999)999-99-99")
             });
         </script>
             <!-- Yandex.Metrika counter -->
