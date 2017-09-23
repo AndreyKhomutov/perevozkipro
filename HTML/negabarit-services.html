@@ -194,8 +194,8 @@
                         <h2>ПЕРВЫЕ 100 КМ НЕГАБАРИТНОЙ ПЕРЕВОЗКИ - БЕСПЛАТНО!*</h2>
                         <h4>ПОЛУЧИТЕ РАСЧЕТ СТОИМОСТИ ПЕРЕВОЗКИ ГРУЗА</h4>
                         <h4>В течении 15 минут специалист рассчитает ставку и наличие машин в районе погрузки!</h4>
-                        <div class="col-md-6" style="background: antiquewhite;color: black;
-                        margin-left: 150px; margin-bottom: 20px;padding: 20px">
+                        <div class="col-md-8" style="background: antiquewhite;color: black;
+                        margin-left: 120px; margin-bottom: 20px;padding: 30px">
                             <form id="formNegabarit" class="form-horizontal">
                                 <input type="hidden" name="fromModalName" id="fromModalName" value="">
                                 <input type="hidden" name="fromModalEmail" id="fromModalEmail" value="">
@@ -216,7 +216,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputDate" class="col-xs-4 control-label"><strong>Ориентировачная дата перевозки:</strong></label>
+                                    <label for="inputDate" class="col-xs-4 control-label"><strong>Дата перевозки:</strong></label>
                                     <div class="col-xs-8">
                                         <input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="10 сентября 2017"  autocomplete="off">
                                     </div>
@@ -235,6 +235,21 @@
                         <h4>более 1 млн руб</h4>
                         <h3>IPHONE X в подарок</h3>
                         <img src="img/iphone-x-3-2.jpg" alt=""/>
+                        <br>
+                        <li class="widget widget-text">
+                            <div class="title">
+                                <h3>Контакты</h3>
+                            </div>
+                            <span class="text-big">
+                                    +7 (495) 649-4530
+                                </span>
+                            <br>
+                            <span class="text-big">
+                                    +7 (812) 649-4530
+                                </span>
+                        </li>
+
+
                     </div>
 
                     <div class="modal fade" id="modalForm" role="dialog" style="display: none;" aria-hidden="true">
@@ -271,7 +286,7 @@
                                         <div class="form-group">
                                             <label for="modalPhone"><strong>Телефон</strong></label>
                                             <input class="form-control" id="modalPhone" name="modalPhone"
-                                                   placeholder="Ваш номер телефона для связи (+7(999)999-99-99)" type="tel" autocomplete="off">
+                                                   placeholder="Ваш номер телефона для связи" type="number" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label for="modalEmail"><strong>Email</strong></label>
@@ -535,7 +550,6 @@
         <!--Jquery validator-->
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-        <script type="text/javascript" src="js/jquery.inputmask.js"></script>
         <script>
             $(document).ready(function() {
                 $('#formNegabarit').validate({
@@ -562,7 +576,6 @@
                         modalPhone: "Поле не заполнено"
                     }
                 });
-                $("#modalPhone").inputmask("+7(999)999-99-99")
             });
         </script>
             <!-- Yandex.Metrika counter -->
