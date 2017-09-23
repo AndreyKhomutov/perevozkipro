@@ -606,8 +606,8 @@
                 var date=$('#inputDate').val();
                 var type=$('#inputType').val();
 
-                var inputWedth=$('#inputWedth').val();
-                var inputLanding=$('#inputLanding').val();
+                var inputWedth = $('#inputWedth').is(":checked");
+                var inputLanding=$('#inputLanding').is(":checked");
 
                 var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail, 'modalPhone': modalPhone,
                     'modalMessage': modalMessage, 'date':date, 'type': type, 'inputWedth':inputWedth, 'inputLanding': inputLanding});
