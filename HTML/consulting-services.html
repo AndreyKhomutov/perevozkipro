@@ -602,13 +602,14 @@
                 var modalName=$('#modalName').val();
                 var modalEmail=$('#modalEmail').val();
                 var modalMessage=$('#modalMessage').val();
+                var modalPhone=$('#modalPhone').val();
                 var date=$('#inputDate').val();
                 var type=$('#inputType').val();
 
                 var inputWedth=$('#inputWedth').val();
                 var inputLanding=$('#inputLanding').val();
 
-                var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail,
+                var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail, 'modalPhone': modalPhone,
                     'modalMessage': modalMessage, 'date':date, 'type': type, 'inputWedth':inputWedth, 'inputLanding': inputLanding});
                 $.ajax({
                     type: 'POST',

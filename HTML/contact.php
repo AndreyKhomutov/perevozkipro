@@ -41,6 +41,7 @@ if ($action == 'contact') {
 } else if ($action == 'negabarit') {
     $modalName = $_POST['form_data'][0]['modalName'];
     $modalEmail = $_POST['form_data'][0]['modalEmail'];
+    $modalPhone = $_POST['form_data'][0]['modalPhone'];
     $modalMessage = $_POST['form_data'][0]['modalMessage'];
     $date = $_POST['form_data'][0]['date'];
     $type = $_POST['form_data'][0]['type'];
@@ -55,13 +56,14 @@ if ($action == 'contact') {
         exit();
     }
     
-    $message = "Имя: " . $modalName . "\r\n"
+    $message =   "Адрес погрузки/выгрузки: " . $modalName . "\r\n"
                 . "Электронная почта: " . $modalEmail . "\r\n"
+                . "Телефон: " . $modalPhone . "\r\n"
                 . "Ориентировачная дата перевозки: " . $date . "\r\n"
                 . "Тип груза: " . $type . "\r\n"
                 . "Необходима погрузка/выгрузка: " . $inputLanding . "\r\n"
                 . "Груз весит более 38 тонн   : " . $inputWedth . "\r\n"
-                . "Сообщение: " . $modalMessage . "\r\n";
+                . "Подробности с формы: " . $modalMessage . "\r\n";
 } else if ($action == 'comment') {
     $name = $_POST['form_data'][0]['Name'];
     $email = $_POST['form_data'][0]['Email'];
