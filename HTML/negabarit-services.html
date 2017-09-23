@@ -617,8 +617,10 @@
                     data: ({'action': 'negabarit', 'form_data': form_data})
                 }).done(function (data) {
                     alert(data);
+                    if (data=='Сообщение успешно отправлено.'){
+                        $('#formNegabarit').submit();
+                    }
                 });
-                $('#formNegabarit').submit();
             }
         });
         function validateForm(){
