@@ -64,7 +64,40 @@ if ($action == 'contact') {
                 . "Необходима погрузка/выгрузка: " . $inputLanding . "\r\n"
                 . "Груз весит более 38 тонн   : " . $inputWedth . "\r\n"
                 . "Подробности с формы: " . $modalMessage . "\r\n";
-} else if ($action == 'comment') {
+} else if ($action == 'formCustomInfo') {
+      $modalEmail = $_POST['form_data'][0]['modalEmail'];
+      $modalPhone = $_POST['form_data'][0]['modalPhone'];
+      $modalAddress = $_POST['form_data'][0]['modalAddress'];
+      $modalMessage = $_POST['form_data'][0]['modalMessage'];
+
+      $inputDesc = $_POST['form_data'][0]['inputDesc'];
+      $inputWeight = $_POST['form_data'][0]['inputWeight'];
+      $inputCost = $_POST['form_data'][0]['inputCost'];
+
+      $inputContractCheckbox = $_POST['form_data'][0]['inputContractCheckbox'];
+      $inputCostTransferCheckbox = $_POST['form_data'][0]['inputCostTransferCheckbox'];
+      // you can change default Subject for comment form here
+      $subject = 'New comment!';
+
+      if ($modalEmail == "" || $modalPhone == "" || $modalAddress == ""  || $inputWeight == ""  || $inputCost == "" || $inputDesc == "") {
+          echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
+          exit();
+      }
+
+      $message =
+                    "Место отгрузки/доставки : " . $modalAddress . "\r\n"
+                  . "Электронная почта: " . $modalEmail . "\r\n"
+                  . "Телефон: " . $modalPhone . "\r\n"
+                  . "Дополнительная информация: " . $modalMessage . "\r\n"
+
+
+                  . "Описание товара: " . $inputDesc . "\r\n"
+                  . "Вес груза нетто: " . $inputWeight . "\r\n"
+                  . "Стоимость груза: " . $inputCost . "\r\n"
+
+                  . "Поставка на Ваш контракт   : " . $inputContractCheckbox . "\r\n"
+                  . "Стоимость международной транспортировки включена в стоимость товара: " . $inputCostTransferCheckbox . "\r\n";
+  } else if ($action == 'comment') {
     $name = $_POST['form_data'][0]['Name'];
     $email = $_POST['form_data'][0]['Email'];
     $message = $_POST['form_data'][0]['Message'];
