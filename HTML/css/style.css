@@ -1596,7 +1596,7 @@ blockquote{
     7.8. CUSTOM HEADING
     ------------------------------------------------------------------------- */
 .row .custom-heading:only-child{
-    margin-bottom: -70px;
+    margin-bottom: -40px;
 }
 
 .custom-heading{
