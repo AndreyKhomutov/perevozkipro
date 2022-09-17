@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ПеревозкиПро - наши клиенты.</title>
+        <title>ПеревозкиПро - Грузоперевозки по России и миру</title>
         <meta name="description" content="компания ПеревозкиПро осуществляет грузоперевозки по России и миру">
         <meta name="author" content="khomutov86@gmail.com">
         <meta name="keywords" content="грузоперевозки, логистика, доставка, груз, транспортная компания, грузоперевозки по россии, логистическая компания">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="yandex-verification" content="101f8f73baac61cc" />
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/bootstrap.css"/><!-- bootstrap grid -->
-        <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
+        <link rel="stylesheet" href="css/animate.css"/><!-- used for animations -->
         <link rel='stylesheet' href='owl-carousel/owl.carousel.css'/><!-- Client carousel -->
+        <link rel="stylesheet" href="masterslider/style/masterslider.css" /><!-- Master slider css -->
+        <link rel="stylesheet" href="masterslider/skins/default/style.css" /><!-- Master slider default skin -->
+        <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
         <link rel="stylesheet" href="css/color-default.css"/><!-- template main color -->
         <link rel="stylesheet" href="css/retina.css"/><!-- retina ready styles -->
         <link rel="stylesheet" href="css/responsive.css"/><!-- responsive styles -->
@@ -22,13 +26,8 @@
 
         <!-- Font icons -->
         <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css -->
-<style>
-    .clients-li li img {
-        height: 120px;
-        width: auto;
-    }
-</style>
     </head>
+
     <body>
         <div class="header-wrapper header-transparent">
             <!-- .header.header-style01 start -->
@@ -54,11 +53,11 @@
                                     <!-- MAIN NAVIGATION -->
                                     <div class="collapse navbar-collapse">
                                         <ul class="nav navbar-nav">
-                                            <li class="dropdown">
+                                            <li class="dropdown current-menu-item">
                                                 <a href="index.html">Главная</a>
                                             </li><!-- .dropdown end -->
 
-                                            <li class="dropdown current-menu-item">
+                                            <li class="dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">О компании</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="about.html">О компании</a></li>
@@ -69,6 +68,7 @@
                                                 </ul><!-- .dropdown-menu end -->
                                             </li><!-- .dropdown end -->
 
+
                                             <li class="dropdown">
                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">География</a>
                                                 <ul class="dropdown-menu">
@@ -78,7 +78,6 @@
                                                     <li><a href="geography/china-services.html">Грузоперевозки из/в Китай</a></li>
                                                 </ul><!-- .dropdown-menu end -->
                                             </li><!-- .dropdown end -->
-
 
                                             <li class="dropdown">
                                                 <a href="" data-toggle="dropdown" class="dropdown-toggle">Услуги</a>
@@ -166,7 +165,6 @@
                                                 </li>
 
 
-
                                                 <li class="dropdown">
                                                     <a href="gallery01.html">Автопарк</a>
                                                 </li>
@@ -188,124 +186,361 @@
                                 </nav><!-- .navbar.navbar-default end -->
                             </div><!-- .col-md-12 end -->
                         </div><!-- .row end -->
-                    </div><!-- .main-nav end -->
+                    </div>
+                    <!-- .main-nav end -->
                 </div><!-- .container end -->
             </header><!-- .header.header-style01 -->
         </div><!-- .header-wrapper.header-transparent end -->
 
-        <!-- .page-title start -->
-        <div class="page-title-style01 page-title-negative-top pt-bkg09">
+        <div id="masterslider" class="master-slider ms-skin-default">
+            <!-- first slide -->
+            <div class="ms-slide">
+                <!-- slide background -->
+                <img src="img/slider/video-bg.jpg" data-src="img/slider/video-bg.jpg" alt="Video slider"/>
+
+                <video data-autopause="false" data-mute="false" data-loop="true" data-fill-mode="fill" class="ms-slide-bgvideo"
+                       style="left: 0; top:0;">
+                    <source src="http://www.pixel-industry.com/html/trucking/Truck_Driving_on_Country_Road.mp4" type="video/mp4">
+                    <source src="http://www.pixel-industry.com/html/trucking/Truck_Driving_on_Country_Road.webm" type="video/webm">
+                    <source src="http://www.pixel-industry.com/html/trucking/Truck_Driving_on_Country_Road.ogg" type="video/ogg">
+                </video>
+
+                <h2 class="ms-layer pi-caption01"  
+                    style="left: 58px; top: 420px;" 
+                    data-type="text" 
+                    data-effect="top(short)" 
+                    data-duration="300"
+                    data-hide-effect="fade" 
+                    data-delay="0" 
+                    >
+                    Грузоперевозки
+                </h2>
+
+                <img class="ms-layer" src="masterslider/blank.gif" data-src="img/slider/slider-line.jpg" alt=""
+                     style="left: 540px; top: 480px;"
+                     data-type="image" 
+                     data-effect="bottom(short)" 
+                     data-duration="300"
+                     data-hide-effect="fade" 
+                     data-delay="0" 
+                     />
+
+                <p class="ms-layer pi-text"
+                   style="left: 395px; top: 500px;"
+                   data-type="text" 
+                   data-effect="top(short)" 
+                   data-duration="300"
+                   data-hide-effect="fade" 
+                   data-delay="500"      
+                   >
+                    Полный логистический комплекс.
+                </p>
+            </div><!-- .ms-slide end -->
+
+            <!-- slide start -->
+            <div class="ms-slide">
+                <!-- slide background -->
+                <img src="masterslider/blank.gif" data-src="img/slider/slide03.jpg" alt="Worldwide freight services"/> 
+
+                <h2 class="ms-layer pi-caption01" 
+                    style="left: 258px; top: 420px;" 
+                    data-type="text" 
+                    data-effect="top(short)" 
+                    data-duration="300"
+                    data-hide-effect="fade" 
+                    data-delay="0" 
+                    >
+                    Грузоперевозки
+                </h2>
+
+                <img class="ms-layer" src="masterslider/blank.gif" data-src="img/slider/slider-line.jpg" alt=""
+                     style="left: 540px; top: 480px;"
+                     data-type="image" 
+                     data-effect="bottom(short)" 
+                     data-duration="300"
+                     data-hide-effect="fade" 
+                     data-delay="100" 
+                     />
+
+                <p class="ms-layer pi-text"
+                   style="left: 278px; top: 500px;"
+                   data-type="text" 
+                   data-effect="top(short)" 
+                   data-duration="300"
+                   data-hide-effect="fade" 
+                   data-delay="300"      
+                   >
+                    Авто, авиа, ж/д и морские. Мы можем все!
+                </p>
+            </div><!-- .ms-slide end -->
+        </div><!-- #masterslider end -->
+
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 clearfix">
+                        <ul class="tabs">
+                            <li class="active">
+                                <a href="#tab1">О нас</a>
+                            </li><!-- .active end -->
+
+
+                            <li>
+                                <a href="#tab3">Наш адрес</a>
+                            </li>
+                        </ul><!-- .tabs end -->
+
+                        <div class="tab-content-wrap">
+                            <div id="tab1" class="tab-content">
+                                <img src="img/pics/illustration01.png" alt="" class="float-left"/>
+
+                                <br />
+
+                                <p class="text-big">
+
+                                    Добро пожаловать на наш сайт, мы опытная логистическая
+                                    компания, работающая более чем в 150 странах мира.
+                                </p>
+
+
+                                <p>
+                                    Компания ПеревозкиПро предлагает надежные и качественные услуги
+                                    в области грузоперевозок по России и всему миру.
+
+                                    Мы предлагаем быструю, точную и надежную доставку с профессиональными
+                                    водителями. Мы успешно отправили огромное количество грузов
+                                    и можем доставить ваш груз в любую точку планеты.
+                                </p>
+
+                                <a class="read-more" href="about.html">
+                                    <span>
+                                        Узнать больше
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div><!-- #tab1.tab-content end -->
+
+                            <div id="tab3" class="tab-content">
+                                <img src="img/pics/locations.jpg" alt="" class="float-left"/>
+
+                                <br />
+
+
+                                <p>
+                                    Мы находимся по адресу:<br>
+                                    в г.Санкт-Петербург: <br>
+                                    ул.Профессора Попова 37 лит Щ, БЦ Сенатор,
+                                    Телефон: +7 (812) 649-4530
+                                    <br>
+                                     в г.Москва: <br>
+                                    ,
+                                    Телефон: +7 (495) 649-4530
+                                    <br>
+                                    Электронная почта: info@перевозкипро.рф
+                                </p>
+
+                                <a class="read-more" href="contact-simple.html">
+                                    <span>
+                                       просмотреть контакты полностью
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div><!-- #tab3.tab-content end -->
+                        </div><!-- .tab-content-wrap end -->
+                    </div><!-- .col-md-8 end -->
+                </div><!-- .row end -->
+            </div><!-- .container end -->
+        </div><!-- .page-content end -->      
+
+        <div class="page-content parallax parallax01 dark mb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="custom-heading02">
+                        <h2>Наши услуги</h2>
+                        <p>
+                            Больше чем просто транспортная компания
+                        </p>
+                    </div><!-- .custom-heading02 end -->
+                </div><!-- .row end -->
+
+                <div class="row mb-30">
+                    <div class="col-md-6">
+                        <div class="service-icon-left">
+                            <div class="icon-container triggerAnimation animated" data-animate="zoomIn">
+                                <img src="img/svg/pi-checklist-2.svg" alt="checklist icon">
+                            </div><!-- .icon-container end -->
+
+                            <div class="service-details">
+                                <h3>Перевозка груза - "Все включено"</h3>
+
+                                <p>
+                                    Услуга идеально подходит для тех, кто ценит свое время.
+                                    В данном случае участие клиента в процессе сведено к минимуму.
+                                    От клиента необходимы только информация по грузу, адрес и сроки его доставки.
+                                    Всю остальную работу наши специалисты возьмут на себя.
+                                </p>
+                            </div><!-- .service-details end -->
+                        </div><!-- .service-icon-left end -->
+                    </div><!-- .col-md-6 end -->
+
+                    <div class="col-md-6">
+                        <div class="service-icon-left">
+                            <div class="icon-container triggerAnimation animated" data-animate="zoomIn">
+                                <img src="img/svg/pi-globe-5.svg" alt="globe icon">
+                            </div><!-- .icon-container end -->
+
+                            <div class="service-details">
+                                <h3>Сухопутные, морские и воздушные перевозки</h3>
+
+                                <p>
+                                    Наша компания предлагает лучшие логистические услуги,
+                                    используя все звенья цепочки поставок.
+                                    Используйте наши решения для сухопутных, морских и
+                                    воздушных перевозок для отправки ваших товаров.
+                                </p>
+                            </div><!-- .service-details end -->
+                        </div><!-- .service-icon-left end -->
+                    </div><!-- .col-md-6 end -->
+                </div><!-- .row.mb-30 end -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service-icon-left">
+                            <div class="icon-container triggerAnimation animated" data-animate="zoomIn">
+                                <img src="img/svg/pi-forklift-truck-5.svg" alt="forklift truck icon">
+                            </div><!-- .icon-container end -->
+
+                            <div class="service-details">
+                                <h3>Складирование и хранение</h3>
+
+                                <p>
+                                    Наша компания предлагает интеллектуальное складское решение.
+                                    Храните ваш груз с помощью наших современных и интеллектуальных складов.
+                                </p>
+                            </div><!-- .service-details end -->
+                        </div><!-- .service-icon-left end -->
+                    </div><!-- .col-md-6 end -->
+
+                    <div class="col-md-6">
+                        <div class="service-icon-left">
+                            <div class="icon-container triggerAnimation animated" data-animate="zoomIn">
+                                <img src="img/svg/pi-touch-desktop.svg" alt="touch icon">
+                            </div><!-- .icon-container end -->
+
+                            <div class="service-details">
+                                <h3>Негабаритные перевозки</h3>
+
+                                <p>
+                                    Не знаете, какое средство доставки вам подходит,
+                                    или вам нужен кто-то для полного управления цепочками поставок?
+                                    Пожалуйста свяжитесь с нами. Наша команда профессионалов будет рада помочь.
+                                </p>
+                            </div><!-- .service-details end -->
+                        </div><!-- .service-icon-left end -->
+                    </div><!-- .col-md-6 end -->
+                </div><!-- .row end -->
+            </div><!-- .container end -->
+        </div><!-- .page-content.parallax end -->
+
+        <!--<div class="page-content">-->
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-9">-->
+                        <!--<div class="custom-heading">-->
+                            <!--<h2>Наши сотрудники</h2>-->
+                        <!--</div>&lt;!&ndash; .custom-heading end &ndash;&gt;-->
+
+                        <!--<div class="row">-->
+                            <!--<div class="col-md-4 col-sm-4">-->
+                                <!--<div class="team-member">-->
+                                    <!--<img src="img/pics/team01.jpg" alt=""/>-->
+                                    <!--<div class="team-details">-->
+                                        <!--<h5>Екатерина</h5>-->
+                                        <!--<p class="position">-->
+                                            <!--Основатель компании-->
+                                        <!--</p>-->
+                                    <!--</div>&lt;!&ndash; .team-details end &ndash;&gt;-->
+                                <!--</div>&lt;!&ndash; .member end &ndash;&gt;-->
+                            <!--</div>&lt;!&ndash; .col-md-4 end &ndash;&gt;-->
+
+                            <!--<div class="col-md-4 col-sm-4">-->
+                                <!--<div class="team-member">-->
+                                    <!--<img src="img/pics/team02.jpg" alt=""/>-->
+                                    <!--<div class="team-details">-->
+                                        <!--<h5>Андрей</h5>-->
+                                        <!--<p class="position">-->
+                                            <!--Международные перевозки-->
+                                        <!--</p>-->
+                                    <!--</div>&lt;!&ndash; .team-details end &ndash;&gt;-->
+                                <!--</div>&lt;!&ndash; .member end &ndash;&gt;-->
+                            <!--</div>&lt;!&ndash; .col-md-4 end &ndash;&gt;-->
+
+                            <!--<div class="col-md-4 col-sm-4">-->
+                                <!--<div class="team-member">-->
+                                    <!--<img src="img/pics/team03.jpg" alt=""/>-->
+                                    <!--<div class="team-details">-->
+                                        <!--<h5>Алексей</h5>-->
+                                        <!--<p class="position">-->
+                                            <!--Перевозки по России-->
+                                        <!--</p>-->
+                                    <!--</div>&lt;!&ndash; .team-details end &ndash;&gt;-->
+                                <!--</div>&lt;!&ndash; .member end &ndash;&gt;-->
+                            <!--</div>&lt;!&ndash; .col-md-4 end &ndash;&gt;-->
+                        <!--</div>&lt;!&ndash; .row end &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; .col-md-9 end &ndash;&gt;-->
+
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="custom-heading">-->
+                            <!--<h2>Присоединяйтесь к нашей команде</h2>-->
+                        <!--</div>&lt;!&ndash; .custom-heading end &ndash;&gt;-->
+
+                        <!--<div class="promo-box promo-bkg01">-->
+                            <!--<h4>Открыты 2 вакансии</h4>-->
+                            <!--<p>-->
+                                <!--У нас открыты вакансии логиста и менеджера-->
+                                <!--по работе с клиентами.-->
+                            <!--</p>-->
+
+                            <!--<a href="driver-application.html" class="btn btn-medium btn-yellow">-->
+                                <!--<span>Подробнее</span>-->
+                            <!--</a>-->
+                        <!--</div>&lt;!&ndash; .promo-box end &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; .row end &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; .contaienr end &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; .page-content end &ndash;&gt;-->
+
+        <div class="page-content custom-bkg bkg-grey">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>ПеревозкиПро - наши клиенты</h1>
+                        <div class="custom-heading02 simple">
+                            <h2>Клиенты</h2>
+                        </div>
                     </div><!-- .col-md-12 end -->
                 </div><!-- .row end -->
-            </div><!-- .container end -->
-        </div><!-- .page-title-style01.page-title-negative-top end -->
 
-
-        <li class="page-content">
-            <li class="container">
-                <li class="row">
-                    <li class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="custom-heading">
-                                    <h2>Наши клиенты</h2>
-                                </div><!-- .custom-heading end -->
-
-                                <p>
-                                    Клиентами нашей компании являются компании из самых
-                                    разных сфер деятельности, включая промышленность и
-                                    розничную торговлю, при этом их размер и
-                                    уровень автоматизации бизнес-процессов может отличаться в разы.
-                                </p>
-
-                            </div><!-- .col-md-7 end --> 
-
-                            <div class="col-md-5 clearfix">
-                                <div class="carousel-container">
-                                    <div id="testimonial-carousel" class="owl-carousel owl-carousel-navigation">
-                                        <div class="owl-item">
-                                            <div class="testimonial">
-                                                <p>
-                                                    «ООО "Технические промышленные решения" благодарит компанию ПеревозкиПро
-                                                    г. СПб за надежное сотрудничество. Хотелась бы подчеркнуть компетентность,
-                                                    надежность, пунктуальность, профессионализм компании ГрузоперезкиПро.
-                                                </p>
-
-                                                <div class="testimonial-author">
-                                                    <p>
-                                                        Иван Сергеевич, <br />
-                                                        ООО "Технические промышленные решения"
-                                                    </p>
-                                                </div><!-- .testimonial-author end -->
-                                            </div><!-- .testimonial end -->
-                                        </div><!-- .owl-item end -->
-
-                                        <div class="owl-item">
-                                            <div class="testimonial">
-                                                <p>
-                                                    Не знаю как на счет авиа перевозок,
-                                                    но автоперевозки у компании ПеревозкиПро на высоком уровне.
-                                                    Логистика построена хорошо. Быстрое оформление документов,
-                                                    сроки доставки не хромают.
-                                                </p>
-
-                                                <div class="testimonial-author">
-                                                    <p>
-                                                        Федоров Роман, <br />
-                                                        ГК 'Фул <солютионс></солютионс>'
-                                                    </p>
-                                                </div><!-- .testimonial-author end -->
-                                            </div><!-- .testimonial end -->
-                                        </div><!-- .owl-item end -->
-
-                                        <div class="owl-item">
-                                            <div class="testimonial">
-                                                <p>
-                                                    Не ожидал такого профессионального подхода к делу, что очень порадовало.
-                                                    Вообще имею приличный опыт работы с такого рода компаниями,
-                                                    да и сам работал в одной из таких и от неожиданностей
-                                                    застраховаться не получится в любом случае - это точно.
-                                                    Но тут ребята по максимуму заботятся о клиенте, это видно сразу.
-                                                </p>
-
-                                                <div class="testimonial-author">
-                                                    <p>
-                                                        Петр Иванович, <br />
-                                                        ООО "ПМЗ24"
-                                                    </p>
-                                                </div><!-- .testimonial-author end -->
-                                            </div><!-- .testimonial end -->
-                                        </div><!-- .owl-item end -->
-                                    </div><!-- #testimonial-carousel end -->
-                                </div><!-- .carousel-container end -->
-                            </div><!-- .col-md-5 end -->
-                        </div><!-- .row end -->
-
-                        <div class="custom-heading">
-                            <h2>Наши партнеры</h2>
-                        </div><!-- .custom-heading end -->
-
-                        <ul class="clients-li clearfix">
-                            <li><a href="http://kron-spb.com/"><img src="img/partner/Kron-logo-1.gif"></a></li>
-                            <li><a href="http://spbgranit.ru/"><img src="img/partner/logo-granit.png"></a></li>
-                            <li><a href="http://ktppro.ru/"><img src="img/partner/ktppro-logo.png"></a></li>
-                            <li><a href="http://www.isocoat.ru/"><img src="img/partner/isocoat.png"></a></li>
-                            <li><a href="http://www.energostar.com/"><img src="img/partner/zvezda-energetika.jpg"></a></li>
-                            <li><a href="http://www.telinekataja.ru/"><img src="img/partner/telinekataja.jpg"></a></li>
-                            <li><a href="http://geotlm.com/"><img src="img/partner/geotelemetria.png"></a></li>
-                            <li><a href="http://www.himmash.spb.ru/"><img src="img/partner/химмаш.jpeg"></a></li>
-                            <li><a href="http://www.rok5.ru/"><img src="img/partner/fish5.png"></a></li>
-                            <li><a href="http://www.energocomplekt.ru/"><img src="img/partner/энергокомплект.jpeg"></a></li>
-                            <li><a href="http://storge-bk.ru/"><img src="img/partner/storge.png"></a></li>
-                            <li><a href="http://www.teraprom.ru/"><img src="img/partner/teraprom.jpg"></a></li>
-                            <li><a href="http://www.http://eninsi.ru/"><img src="img/partner/enensi.png"></a></li>
-                            <li><a href="http://www.pozp.ru/"><img src="img/partner/progres.png"></a></li>
-                        </ul><!-- .clients-li end -->
-                    </div><!-- .col-md-9 end -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="carousel-container">
+                            <div id="client-carousel" class="owl-carousel owl-carousel-navigation">
+                                <div class="owl-item"><a href="http://kron-spb.com/"><img src="img/partner/Kron-logo-1.gif"></a></div>
+                                <div class="owl-item"><a href="http://www.isocoat.ru/"><img src="img/partner/isocoat.png"></a></div>
+                                <div class="owl-item"><a href="http://www.ktppro.ru/"><img src="img/partner/ktppro-logo.png"></a></div>
+                                <div class="owl-item"><a href="http://www.spbgranit.ru/"><img src="img/partner/logo-granit.png"></a></div>
+                                <div class="owl-item"><a href="http://www.energostar.com/"><img src="img/partner/zvezda-energetika.jpg"></a></div>
+                                <div class="owl-item"><a href="http://www.telinekataja.ru/"><img src="img/partner/telinekataja.jpg"></a></div>
+                                <div class="owl-item"><a href="http://geotlm.com/"><img src="img/partner/geotelemetria.png"></a></div>
+                                <div class="owl-item"><a href="http://www.himmash.spb.ru/"><img src="img/partner/химмаш.jpeg"></a></div>
+                                <div class="owl-item"><a href="http://www.rok5.ru/"><img src="img/partner/fish5.png"></a></div>
+                                <div class="owl-item"><a href="http://www.energocomplekt.ru/"><img src="img/partner/энергокомплект.jpeg"></a></div>
+                                <div class="owl-item"><a href="http://storge-bk.ru/"><img src="img/partner/storge.png"></a></div>
+                                <div class="owl-item"><a href="http://www.teraprom.ru/"><img src="img/partner/teraprom.jpg"></a></div>
+                                <div class="owl-item"><a href="http://www.http://eninsi.ru/"><img src="img/partner/enensi.png"></a></div>
+                                <div class="owl-item"><a href="http://www.pozp.ru/"><img src="img/partner/progres.png"></a></div>
+                            </div><!-- .owl-carousel.owl-carousel-navigation end -->
+                        </div><!-- .carousel-container end -->
+                    </div><!-- .col-md-12 end -->
                 </div><!-- .row end -->
             </div><!-- .container end -->
         </div><!-- .page-content end -->
@@ -391,11 +626,11 @@
             <a href="#" class="scroll-up">Scroll</a>
         </div><!-- #footer-wrapper end -->
 
-
         <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
         <script src="js/bootstrap.min.js"></script><!-- .bootstrap script -->
         <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->  
         <script src="owl-carousel/owl.carousel.min.js"></script><!-- Carousels script -->
+        <script src="masterslider/masterslider.min.js"></script><!-- Master slider main js -->
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
 
@@ -403,46 +638,58 @@
             /* <![CDATA[ */
             jQuery(document).ready(function ($) {
                 'use strict';
+                // MASTER SLIDER START 
+                var slider = new MasterSlider();
+                slider.setup('masterslider', {
+                    width: 1140, // slider standard width
+                    height: 854, // slider standard height
+                    space: 0,
+                    speed: 50,
+                    layout: "fullwidth",
+                    centerControls: false,
+                    loop: true,
+                    autoplay: false
+                            // more slider options goes here...
+                            // check slider options section in documentation for more options.
+                });
+                // adds Arrows navigation control to the slider.
+                slider.control('arrows');
 
-                $('#testimonial-carousel').owlCarousel({
-                    items: 1,
+                $('#client-carousel').owlCarousel({
+                    items: 6,
                     loop: true,
                     margin: 30,
                     responsiveClass: true,
                     mouseDrag: true,
                     dots: false,
-                    autoheight: true,
                     responsive: {
                         0: {
-                            items: 1,
+                            items: 2,
                             nav: true,
                             loop: true,
                             autoplay: true,
                             autoplayTimeout: 3000,
                             autoplayHoverPause: true,
-                            responsiveClass: true,
-                            autoHeight: true
+                            responsiveClass: true
                         },
                         600: {
-                            items: 1,
+                            items: 3,
                             nav: true,
                             loop: true,
                             autoplay: true,
                             autoplayTimeout: 3000,
                             autoplayHoverPause: true,
-                            responsiveClass: true,
-                            autoHeight: true
+                            responsiveClass: true
                         },
                         1000: {
-                            items: 1,
+                            items: 6,
                             nav: true,
                             loop: true,
                             autoplay: true,
                             autoplayTimeout: 3000,
                             autoplayHoverPause: true,
                             responsiveClass: true,
-                            mouseDrag: true,
-                            autoHeight: true
+                            mouseDrag: true
                         }
                     }
                 });
