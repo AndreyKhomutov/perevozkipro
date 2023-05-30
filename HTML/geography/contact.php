@@ -98,25 +98,31 @@ if ($action == 'contact') {
             . "Должность: " . $driver_type . "\r\n"
             . "Телефон: " . $phone_number . "\r\n"
             . "Опыт работы: " . $driver_experience . "\r\n";
-}
-else if ($action == 'shipping') {
+} else if ($action == 'shipping') {
     $tracking_origin = $_POST['form_data'][0]['origin_zip'];
     $tracking_destination = $_POST['form_data'][0]['destination_zip'];
     $tracking_weight = $_POST['form_data'][0]['total_weight'];
     $tracking_packages = $_POST['form_data'][0]['number_of_packages'];
     $tracking_email = $_POST['form_data'][0]['email'];
-    
+
     if ($tracking_origin == "" || $tracking_destination == "" || $tracking_email == "") {
         echo "Проблема при отправке E-Mail. Проверьте все поля на форме и попробуйте еще раз!";
         exit();
     }
-    
+
     $message = "Origin ZIP: " . $tracking_origin . "\r\n"
             . "Destination ZIP: " . $tracking_destination . "\r\n"
             . "Total weight: " . $tracking_weight . "\r\n"
             . "Number of packages: " . $tracking_packages . "\r\n"
-            . "Email: " . $tracking_email . "\r\n"; 
-}
+            . "Email: " . $tracking_email . "\r\n";
+} else if ($action == 'callForm'){
+     $pnone = $_POST['form_data'][0]['phone'];
+     $comment = $_POST['form_data'][0]['message'];
+
+
+     $message = "pnone: " . $pnone . "\r\n"
+             . "comment: " . $comment . "\r\n";
+ }
 
 $headers = 'From: ' . $name . '<' . $email . ">\r\n" .
         'Reply-To: ' . $email . "\r\n" .

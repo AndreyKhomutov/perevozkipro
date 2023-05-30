@@ -79,7 +79,7 @@
                                                     <li><a href="hard-services.html">Грузоперевозки по России</a></li>
                                                     <li><a href="india-services.html">Грузоперевозки из/в Индию</a></li>
                                                     <li><a href="turkey-services.html">Грузоперевозки из/в Турцию</a></li>
-                                                    <li><a href="china-services.html">Грузоперевозки из/в Китай</a></li>
+                                                    <li><a href="china-services-test.html">Грузоперевозки из/в Китай</a></li>
                                                 </ul><!-- .dropdown-menu end -->
                                             </li><!-- .dropdown end -->
 
@@ -141,7 +141,7 @@
                                                         <li><a href="hard-services.html">Грузоперевозки по России</a></li>
                                                         <li><a href="india-services.html">Грузоперевозки из/в Индию</a></li>
                                                         <li><a href="turkey-services.html">Грузоперевозки из/в Турцию</a></li>
-                                                        <li><a href="china-services.html">Грузоперевозки из/в Китай</a></li>
+                                                        <li><a href="china-services-test.html">Грузоперевозки из/в Китай</a></li>
                                                     </ul><!-- dl-submenu end -->
                                                 </li>
 
@@ -227,9 +227,34 @@
                     </div>
                     <div class="col-md-7" style="padding-left: 0">
                             <div class="col-md-6 col-sm-7">
-                                <a href="#" class="btn btn-big" style="padding: 30px; font-size: 20px; background-color: darkcyan" >
+                                <a data-target="#exampleModal" data-toggle="modal" class="btn btn-big" style="padding: 30px; font-size: 20px; background-color: darkcyan" >
                                     <span>Заказать звонок</span>
                                 </a>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <form id="callForm">
+                                                    <div class="form-group">
+                                                        <label for="phone" class="col-form-label">Ваш номер:</label>
+                                                        <input class="form-control" id="phone" name="phone"
+                                                               placeholder="Ваш номер телефона " type="number" autocomplete="off">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="message" class="col-form-label">Подробности: (необязательно)</label>
+                                                        <textarea class="form-control" id="message" name="message"
+                                                                  placeholder="Например: грузоперевозка Шахай-Москва 16т" autocomplete="off"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" id="submit2" class="btn btn-success btn-lg" >Заказать звонок</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6 col-sm-7">
                                 <a href="#" class="btn btn-big" style="padding: 30px; font-size: 20px">
@@ -608,14 +633,38 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/44801335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-        <script type="text/javascript">
-            document.write(unescape("%3Cscript src='" + "//yandex.mightycall.ru/c2c/js/MightyCallC2C_5.4.js' type='text/javascript'%3E%3C/script%3E"));
-            document.write(unescape("%3Cscript src='" + "//mightycallstorage.blob.core.windows.net/c2cjss/c6aa7d01-79bd-433b-9d58-0707238a4b40.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-            InitClick2Call();
-        </script>
+<!--        <script type="text/javascript">-->
+<!--            document.write(unescape("%3Cscript src='" + "//yandex.mightycall.ru/c2c/js/MightyCallC2C_5.4.js' type='text/javascript'%3E%3C/script%3E"));-->
+<!--            document.write(unescape("%3Cscript src='" + "//mightycallstorage.blob.core.windows.net/c2cjss/c6aa7d01-79bd-433b-9d58-0707238a4b40.js' type='text/javascript'%3E%3C/script%3E"));-->
+<!--        </script>-->
+<!--        <script type="text/javascript">-->
+<!--            InitClick2Call();-->
+<!--        </script>-->
     <script>
+            $('#submit2').click(function(){
+            var form = $( "#callForm" );
+            if (form.valid()){
+            var message=$('#message').val();
+            var phone=$('#phone').val()
+            var form_data = new Array({
+            'message': message,
+            'phone': phone
+        });
+            $.ajax({
+            type: 'POST',
+            url: "contact.php",
+            data: ({'action': 'callForm', 'form_data': form_data})
+        }).done(function (data) {
+            alert(data);
+            // if (data=='Сообщение успешно отправлено.'){
+            //     // $('#formNegabarit').submit();
+            // }
+        });
+        }
+        });
+
+
+
         $('#submit').click(function(){
             var form = $( "#modalContactForm" );
             if (form.valid()){
