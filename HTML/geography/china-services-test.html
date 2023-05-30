@@ -88,7 +88,7 @@
                                             <li><a href="hard-services.html">Грузоперевозки по России</a></li>
                                             <li><a href="india-services.html">Грузоперевозки из/в Индию</a></li>
                                             <li><a href="turkey-services.html">Грузоперевозки из/в Турцию</a></li>
-                                            <li><a href="china-services-test.html">Грузоперевозки из/в Китай</a></li>
+                                            <li><a href="china-services.html">Грузоперевозки из/в Китай</a></li>
                                         </ul><!-- .dropdown-menu end -->
                                     </li><!-- .dropdown end -->
 
@@ -150,7 +150,7 @@
                                                 <li><a href="hard-services.html">Грузоперевозки по России</a></li>
                                                 <li><a href="india-services.html">Грузоперевозки из/в Индию</a></li>
                                                 <li><a href="turkey-services.html">Грузоперевозки из/в Турцию</a></li>
-                                                <li><a href="china-services-test.html">Грузоперевозки из/в Китай</a></li>
+                                                <li><a href="china-services.html">Грузоперевозки из/в Китай</a></li>
                                             </ul><!-- dl-submenu end -->
                                         </li>
 
@@ -258,11 +258,6 @@
                                             <label for="phone" class="col-form-label">Ваш номер:</label>
                                             <input class="form-control" id="phone" name="phone"
                                                    placeholder="Ваш номер телефона " type="number" autocomplete="off">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message" class="col-form-label">Подробности: (необязательно)</label>
-                                            <textarea class="form-control" id="message" name="message"
-                                                      placeholder="Например: грузоперевозка Шахай-Москва 16т" autocomplete="off"></textarea>
                                         </div>
                                     </form>
                                 </div>
@@ -565,10 +560,9 @@
     $('#submit2').click(function(){
         var form = $( "#callForm" );
         if (form.valid()){
-            var message=$('#message').val();
             var phone=$('#phone').val()
             var form_data = new Array({
-                'message': message,
+                'message': 'no message',
                 'phone': phone
             });
             $.ajax({
