@@ -265,9 +265,47 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-7">
-                    <a href="#" class="btn btn-big" style="padding: 30px; font-size: 20px">
+                    <a data-target="#exampleModalCount" data-toggle="modal" class="btn btn-big" style="padding: 30px; font-size: 20px;" >
                         <span>Заказать рассчет</span>
                     </a>
+
+                    <div class="modal fade" id="exampleModalCount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" id="exampleModal2Count" role="document">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">×</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel2Count">Заказать рассчет</h4>
+                                </div>
+
+                                <div class="modal-body">
+                                    <form id="callFormCount">
+                                        <h5>
+                                            Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
+                                            цен на топливо, погодных условий, состояния дорог на маршруте и тд.
+                                            <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
+                                        </h5>
+                                        <div class="form-group">
+                                            <label for="phoneCount" class="col-form-label">Ваш номер:</label>
+                                            <input class="form-control" id="phoneCount" name="phoneCount"
+                                                   placeholder="Ваш номер телефона " type="number" autocomplete="off">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="messageCount" class="col-form-label">Подробности: (тип груза, дата перевозки, адрес)</label>
+                                            <textarea class="form-control" id="messageCount" name="messageCount"
+                                                      placeholder="Например: грузоперевозка Шахай-Москва 16т" autocomplete="off"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="submit2Count" class="btn btn-success btn-lg" style="background-color: darkcyan">Заказать рассчет</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -376,128 +414,6 @@
 
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-9">
-                <h4>ПОЛУЧИТЕ РАСЧЕТ СТОИМОСТИ ПЕРЕВОЗКИ ГРУЗА</h4>
-                <h4>Мы предоставим скидку в любом удобном для вас виде.</h4>
-                <div class="col-md-8" style="background: antiquewhite;color: black;
-                        margin-left: 120px; margin-bottom: 20px;padding: 30px">
-                    <form id="formNegabarit" class="form-horizontal">
-                        <input type="hidden" name="fromModalName" id="fromModalName" value="">
-                        <input type="hidden" name="fromModalEmail" id="fromModalEmail" value="">
-                        <input type="hidden" name="fromModalMessage" id="fromModalMessage" value="">
-                        <h5>Связь с логистом <a href="https://tlgg.ru/perevozkipro">Telegram</a> <a href=" https://wa.me/+79626815748">WhatsApp</a></h5>
-                        <div class="form-group">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="inputWedth" value="">Страхование груза
-                            </label>
-                            <br>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" value="" id="inputLanding">Необходима погрузка/выгрузка
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputType" class="col-xs-4 control-label"><strong>Тип груза:</strong></label>
-                            <div class="col-xs-8">
-                                <input type="text" class="form-control" id="inputType" name="inputType" placeholder="Например: Бетонный модуль" autocomplete="off">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputDate" class="col-xs-4 control-label"><strong>Дата перевозки:</strong></label>
-                            <div class="col-xs-8">
-                                <input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="10 сентября 2022"  autocomplete="off">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <button type="button" data-toggle="modal" id="modalButton" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
-                            <button type="button" class="navbar-left btn btn-success btn-lg" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-3" style="text-align: center">
-                <h1>У НАС ПОДАРКИ!</h1>
-                <h4>постоянным клиентам</h4>
-                <img src="../img/gifts.jpg" alt=""/>
-                <br>
-                <li class="widget widget-text">
-                    <div class="title">
-                        <h3>Контакты</h3>
-                    </div>
-                    <span class="text-big">
-                                    +7 (495) 649-4530
-                                </span>
-                    <br>
-                    <span class="text-big">
-                                    +7 (812) 649-4530
-                                </span>
-                    <br>
-                    <br>
-                    <span  class="text-big">
-                                Связь с логистом <br> <a href="https://tlgg.ru/perevozkipro">Telegram</a> <a href=" https://wa.me/+79626815748">WhatsApp</a>
-                            </span>
-                </li>
-            </div>
-
-            <div class="modal fade" id="modalForm" role="dialog" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span aria-hidden="true">×</span>
-                                <span class="sr-only">Close</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">Расчет стоимости перевозки</h4>
-                        </div>
-
-                        <!-- Modal Body -->
-                        <div class="modal-body">
-                            <p class="statusMsg"></p>
-                            <form role="form" id="modalContactForm">
-                                <h5>
-                                    Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
-                                    цен на топливо, погодных условий, состояния дорог на маршруте и тд.
-                                    <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
-                                </h5>
-                                <div class="form-group">
-                                    <label for="modalName"><strong>Адрес</strong></label>
-                                    <input class="form-control" id="modalName" name="modalName"
-                                           placeholder="Где будет погрузка и выгрузка: Санкт-Петербург - Астана" type="text" autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label for="modalMessage"><strong>Подробности</strong></label>
-                                    <textarea class="form-control" id="modalMessage" name="modalMessage"
-                                              placeholder="Например: негабарит ширина 4,7м" autocomplete="off"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="modalPhone"><strong>Телефон</strong></label>
-                                    <input class="form-control" id="modalPhone" name="modalPhone"
-                                           placeholder="Ваш номер телефона для связи" type="number" autocomplete="off">
-                                </div>
-                                <div class="form-group">
-                                    <label for="modalEmail"><strong>Email</strong></label>
-                                    <input class="form-control" id="modalEmail" name="modalEmail" placeholder="Ваша эл. почта" type="email" autocomplete="off">
-                                </div>
-
-                                <h5>
-                                    Специалист свяжется с Вами 30 минут для уточнения информации по грузу, либо с готовым предложением по перевозке.
-                                    <br><br>
-                                    Прямой заказ грузоперевозки по телефону 8 (812) 649-45-30
-                                    Запрос коммерческого предложения на почту info@перевозкипро.рф
-                                </h5>
-                            </form>
-                        </div>
-                        <!-- Modal Footer -->
-                        <div class="modal-footer">
-                            <button type="button" id="submit" class="btn btn-success btn-lg" >ОТПРАВИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- .row end -->
     </div><!-- .container end -->
 </div><!-- .page-content end -->
 
@@ -596,34 +512,6 @@
 <!--Jquery validator-->
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#formNegabarit').validate({
-            rules: {
-                inputDate: {required: '#inputDate:visible'},
-                inputType: {required: '#inputType:visible'}
-            },
-            messages: {
-                inputDate: "Поле не заполнено",
-                inputType: "Поле не заполнено"
-            }
-        });
-        $('#modalContactForm').validate({
-            rules: {
-                modalName: {required: '#modalName:visible'},
-                modalEmail: {required: '#modalEmail:visible'},
-                modalMessage: {required: '#modalMessage:visible'},
-                modalPhone: {required: '#modalPhone:visible'}
-            },
-            messages: {
-                modalName: "Поле не заполнено",
-                modalEmail: "Поле заполнено не верно",
-                modalMessage: "Поле не заполнено",
-                modalPhone: "Поле не заполнено"
-            }
-        });
-    });
-</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -640,14 +528,30 @@
     });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/44801335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!--        <script type="text/javascript">-->
-<!--            document.write(unescape("%3Cscript src='" + "//yandex.mightycall.ru/c2c/js/MightyCallC2C_5.4.js' type='text/javascript'%3E%3C/script%3E"));-->
-<!--            document.write(unescape("%3Cscript src='" + "//mightycallstorage.blob.core.windows.net/c2cjss/c6aa7d01-79bd-433b-9d58-0707238a4b40.js' type='text/javascript'%3E%3C/script%3E"));-->
-<!--        </script>-->
-<!--        <script type="text/javascript">-->
-<!--            InitClick2Call();-->
-<!--        </script>-->
+<script>
+    $(document).ready(function() {
+        $('#callForm').validate({
+            rules: {
+                phone: {required: '#phone:visible'}
+            },
+            messages: {
+                phone: "Поле не заполнено"
+            }
+        });
+
+        $('#callFormCount').validate({
+            rules: {
+                phoneCount: {required: '#phoneCount:visible'},
+                messageCount: {required: '#messageCount:visible'}
+            },
+            messages: {
+                phoneCount: "Поле не заполнено",
+                messageCount: "Поле не заполнено"
+            }
+        });
+    });
+</script>
+
 <script>
     $('#submit2').click(function(){
         var form = $( "#callForm" );
@@ -669,41 +573,25 @@
         }
     });
 
-
-
-    $('#submit').click(function(){
-        var form = $( "#modalContactForm" );
+    $('#submit2Count').click(function(){
+        var form = $( "#callFormCount" );
         if (form.valid()){
-            var modalName=$('#modalName').val();
-            var modalEmail=$('#modalEmail').val();
-            var modalMessage=$('#modalMessage').val();
-            var modalPhone=$('#modalPhone').val();
-            var date=$('#inputDate').val();
-            var type=$('#inputType').val();
-
-            var inputWedth = $('#inputWedth').is(":checked");
-            var inputLanding=$('#inputLanding').is(":checked");
-
-            var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail, 'modalPhone': modalPhone,
-                'modalMessage': modalMessage, 'date':date, 'type': type, 'inputWedth':inputWedth, 'inputLanding': inputLanding});
+            var message=$('#messageCount').val();
+            var phone=$('#phoneCount').val()
+            var form_data = new Array({
+                'message': 'from count: ' + message,
+                'phone': phone
+            });
             $.ajax({
                 type: 'POST',
                 url: "contact.php",
-                data: ({'action': 'negabarit', 'form_data': form_data})
+                data: ({'action': 'callForm', 'form_data': form_data})
             }).done(function (data) {
                 alert(data);
-                if (data=='Сообщение успешно отправлено.'){
-                    $('#formNegabarit').submit();
-                }
+                $('#exampleModal2Count').fadeOut();
             });
         }
     });
-    function validateForm(){
-        var form = $( "#formNegabarit" );
-        if (form.valid()){
-            $( "#modalButton" ).click();
-        }
-    }
 </script>
 
 </body>
