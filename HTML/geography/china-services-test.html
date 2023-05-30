@@ -562,7 +562,7 @@
         if (form.valid()){
             var phone=$('#phone').val()
             var form_data = new Array({
-                'message': 'no message',
+                'message': '(from china) no message',
                 'phone': phone
             });
             $.ajax({
@@ -582,7 +582,7 @@
             var message=$('#messageCount').val();
             var phone=$('#phoneCount').val()
             var form_data = new Array({
-                'message': 'from count: ' + message,
+                'message': '(from china) from count: ' + message,
                 'phone': phone
             });
             $.ajax({
