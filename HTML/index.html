@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/bootstrap.css"/><!-- bootstrap grid -->
         <link rel="stylesheet" href="css/animate.css"/><!-- animations -->
         <link rel="stylesheet" href="css/style.css"/><!-- template styles -->
@@ -23,6 +24,19 @@
 
         <!-- Font icons -->
         <link rel="stylesheet" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.min.css"/><!-- Fontawesome icons css -->
+        <style>
+            .error {
+                color: red;
+            }
+            .row {
+                margin-bottom: 10px;
+            }
+
+            .page-title-style01 {
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
     </head>
 
     <body>
@@ -140,6 +154,107 @@
                 </div><!-- .row end -->
             </div><!-- .container end -->
         </div><!-- .page-title-style01.page-title-negative-top end -->
+
+        <div class="page-content">
+            <div class="container">
+                <div class="row" style="margin-bottom: 2px">
+                    <div class="col-md-4 text-center" style="margin-bottom: 2px">
+                        <h2 style="margin-bottom: 0">Наши контакты:</h2>
+                        <div class="col-md-8" style="padding-right: 0">
+                            <h3 style="margin: 0; padding-top: 0; font-family: 'Arial Black'">+7(495)649-4530</h3>
+                            <h3 style="margin: 0; padding-top: 0; font-family: 'Arial Black'">+7(812)649-4530</h3>
+                        </div>
+                        <div class="col-md-2" style="padding: 0">
+                            <a href="https://tlgg.ru/perevozkipro"><img src="img/geography/new/telegram.PNG" style="max-width:85%;"></a>
+                        </div>
+                        <div class="col-md-2" style="padding: 0">
+                            <a href=" https://wa.me/+79626815748"><img src="img/geography/new/whatsApp.PNG" style="max-width:85%;" ></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8" style="padding-left: 0">
+                        <div class="col-md-6 col-sm-7">
+                            <a data-target="#exampleModal" data-toggle="modal" class="btn btn-big btn-block" style="padding: 18px; font-size: 15px; background-color: darkcyan" >
+                                <span>Заказать звонок</span>
+                            </a>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" id="exampleModal2" role="document">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">×</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel2">Заказать обратный звонок</h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form id="callForm">
+                                                <div class="form-group">
+                                                    <label for="phone" class="col-form-label">Ваш номер:</label>
+                                                    <input class="form-control" id="phone" name="phone"
+                                                           placeholder="Ваш номер телефона " type="number" autocomplete="off">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="submit2" class="btn btn-success btn-lg" style="background-color: darkcyan">Заказать звонок</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-7">
+                            <a data-target="#exampleModalCount" data-toggle="modal" class="btn btn-big btn-block" style="padding: 18px; font-size: 15px;" >
+                                <span>Заказать рассчет</span>
+                            </a>
+
+                            <div class="modal fade" id="exampleModalCount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" id="exampleModal2Count" role="document">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">×</span>
+                                                <span class="sr-only">Close</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel2Count">Заказать рассчет</h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <form id="callFormCount">
+                                                <h5>
+                                                    Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
+                                                    цен на топливо, погодных условий, состояния дорог на маршруте и тд.
+                                                    <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
+                                                </h5>
+                                                <div class="form-group">
+                                                    <label for="phoneCount" class="col-form-label">Ваш номер:</label>
+                                                    <input class="form-control" id="phoneCount" name="phoneCount"
+                                                           placeholder="Ваш номер телефона " type="number" autocomplete="off">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="messageCount" class="col-form-label">Подробности: (тип груза, дата перевозки, адрес)</label>
+                                                    <textarea class="form-control" id="messageCount" name="messageCount"
+                                                              placeholder="Например: грузоперевозка Шахай-Москва 16т" autocomplete="off"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" id="submit2Count" class="btn btn-success btn-lg" style="background-color: darkcyan">Заказать рассчет</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: center;">
+                            <h5>Выгодные цены. У нас индивидуальные скидки и подарки за объемы заказа.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .container end -->
+        </div><!-- .page-content end -->
 
         <div class="page-content">
             <div class="container">
@@ -386,33 +501,128 @@
 
 
         <script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
-        <script src="js/bootstrap.min.js"></script><!-- .bootstrap script -->
-        <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
+        <!--Jquery validator-->
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#formCustomInfo').validate({
+                    rules: {
+                        inputWeight: {required: '#inputWeight:visible'},
+                        inputDesc: {required: '#inputDesc:visible'},
+                        inputCost: {required: '#inputCost:visible'}
+                    },
+                    messages: {
+                        inputWeight: "Поле не заполнено",
+                        inputCost: "Поле не заполнено",
+                        inputDesc: "Поле не заполнено"
+                    }
+                });
+                $('#modalContactForm').validate({
+                    rules: {
+                        modalAddress: {required: '#modalAddress:visible'},
+                        modalEmail: {required: '#modalEmail:visible'},
+                        modalPhone: {required: '#modalPhone:visible'}
+                    },
+                    messages: {
+                        modalAddress: "Поле не заполнено",
+                        modalEmail: "Поле заполнено не верно",
+                        modalPhone: "Поле не заполнено"
+                    }
+                });
+            });
+        </script>
         <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(44801335, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/44801335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+            ym(44801335, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/44801335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
         <script type="text/javascript">
             document.write(unescape("%3Cscript src='" + "//yandex.mightycall.ru/c2c/js/MightyCallC2C_5.4.js' type='text/javascript'%3E%3C/script%3E"));
             document.write(unescape("%3Cscript src='" + "//mightycallstorage.blob.core.windows.net/c2cjss/c6aa7d01-79bd-433b-9d58-0707238a4b40.js' type='text/javascript'%3E%3C/script%3E"));
         </script>
         <script type="text/javascript">
             InitClick2Call();
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#callForm').validate({
+                    rules: {
+                        phone: {required: '#phone:visible'}
+                    },
+                    messages: {
+                        phone: "Поле не заполнено"
+                    }
+                });
+
+                $('#callFormCount').validate({
+                    rules: {
+                        phoneCount: {required: '#phoneCount:visible'},
+                        messageCount: {required: '#messageCount:visible'}
+                    },
+                    messages: {
+                        phoneCount: "Поле не заполнено",
+                        messageCount: "Поле не заполнено"
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            $('#submit2').click(function(){
+                var form = $( "#callForm" );
+                if (form.valid()){
+                    var phone=$('#phone').val()
+                    var form_data = new Array({
+                        'message': '(from main) no message',
+                        'phone': phone
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: "contact.php",
+                        data: ({'action': 'callForm', 'form_data': form_data})
+                    }).done(function (data) {
+                        alert(data);
+                        $('#exampleModal2').fadeOut();
+                    });
+                }
+            });
+
+            $('#submit2Count').click(function(){
+                var form = $( "#callFormCount" );
+                if (form.valid()){
+                    var message=$('#messageCount').val();
+                    var phone=$('#phoneCount').val()
+                    var form_data = new Array({
+                        'message': '(from main) from count: ' + message,
+                        'phone': phone
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        url: "contact.php",
+                        data: ({'action': 'callForm', 'form_data': form_data})
+                    }).done(function (data) {
+                        alert(data);
+                        $('#exampleModal2Count').fadeOut();
+                    });
+                }
+            });
         </script>
     </body>
 </html>
