@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ПеревозкиПро - перевозка грузов из/в Турцию</title>
-    <meta name="description" content="перевозка грузов из/в Турцию">
-    <meta name="keywords" content="груз Турция
-грузоперевозки из Турции в Россию
-грузоперевозки Россия Турция
-груз Турция
+    <title>ПеревозкиПро - перевозка грузов из/в Китай</title>
+    <meta name="description" content="перевозка грузов из/в Китай">
+    <meta name="keywords" content="груз Китай
+грузоперевозки из Китая в Россию
+грузоперевозки Россия Китай
+груз Китай
 ">
 
     <meta charset="UTF-8">
@@ -29,15 +29,6 @@
     <style>
         .error {
             color: red;
-        }
-
-        .row {
-            margin-bottom: 10px;
-        }
-
-        .page-title-style01 {
-            padding-bottom: 10px;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -207,7 +198,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>ПеревозкиПро - Доставка грузов из Турции и стран Восточной Азии</h1>
+                <h1>ПеревозкиПро - Доставка грузов из Китая и стран Восточной Азии</h1>
             </div><!-- .col-md-12 end -->
         </div><!-- .row end -->
     </div><!-- .container end -->
@@ -216,204 +207,276 @@
 
 <div class="page-content">
     <div class="container">
-        <div class="row" style="margin-bottom: 2px">
-            <div class="col-md-4 text-center" style="margin-bottom: 2px">
-                <h2 style="margin-bottom: 0">Наши контакты:</h2>
-                <div class="col-md-8" style="padding-right: 0">
-                    <h3 style="margin: 0; padding-top: 0; font-family: 'Arial Black'">+7(495)649-4530</h3>
-                    <h3 style="margin: 0; padding-top: 0; font-family: 'Arial Black'">+7(812)649-4530</h3>
-                </div>
-                <div class="col-md-2" style="padding: 0">
-                    <a href="https://tlgg.ru/perevozkipro"><img src="../img/geography/new/telegram.PNG" style="max-width:85%;"></a>
-                </div>
-                <div class="col-md-2" style="padding: 0">
-                    <a href=" https://wa.me/+79626815748"><img src="../img/geography/new/whatsApp.PNG" style="max-width:85%;" ></a>
+        <div class="row">
+            <div class="col-md-9">
+                <h4>ПОЛУЧИТЕ РАСЧЕТ СТОИМОСТИ ПЕРЕВОЗКИ ГРУЗА</h4>
+                <h4>Мы предоставим скидку в любом удобном для вас виде.</h4>
+                <div class="col-md-8" style="background: antiquewhite;color: black;
+                        margin-left: 120px; margin-bottom: 20px;padding: 30px">
+                    <form id="formNegabarit" class="form-horizontal">
+                        <input type="hidden" name="fromModalName" id="fromModalName" value="">
+                        <input type="hidden" name="fromModalEmail" id="fromModalEmail" value="">
+                        <input type="hidden" name="fromModalMessage" id="fromModalMessage" value="">
+                        <h5>Связь с логистом <a href="https://tlgg.ru/perevozkipro">Telegram</a> <a href=" https://wa.me/+79626815748">WhatsApp</a></h5>
+                        <div class="form-group">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inputWedth" value="">Страхование груза
+                            </label>
+                            <br>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="" id="inputLanding">Необходима погрузка/выгрузка
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputType" class="col-xs-4 control-label"><strong>Тип груза:</strong></label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="inputType" name="inputType" placeholder="Например: Бетонный модуль" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDate" class="col-xs-4 control-label"><strong>Дата перевозки:</strong></label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="10 сентября 2022"  autocomplete="off">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button type="button" data-toggle="modal" id="modalButton" data-target="#modalForm" class="navbar-left" style="background-color: dodgerblue;display: none">Продолжить рассчет</button>
+                            <button type="button" class="navbar-left btn btn-success btn-lg" style="background-color: dodgerblue;" onclick="validateForm()">Продолжить рассчет</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-8" style="padding-left: 0">
-                <div class="col-md-6 col-sm-7">
-                    <a data-target="#exampleModal" data-toggle="modal" class="btn btn-big btn-block" style="padding: 18px; font-size: 15px; background-color: darkcyan" >
-                        <span>Заказать звонок</span>
-                    </a>
+            <div class="col-md-3" style="text-align: center">
+                <h1>У НАС ПОДАРКИ!</h1>
+                <h4>постоянным клиентам</h4>
+                <img src="../img/gifts.jpg" alt=""/>
+                <br>
+                <li class="widget widget-text">
+                    <div class="title">
+                        <h3>Контакты</h3>
+                    </div>
+                    <span class="text-big">
+                                    +7 (495) 649-4530
+                                </span>
+                    <br>
+                    <span class="text-big">
+                                    +7 (812) 649-4530
+                                </span>
+                    <br>
+                    <br>
+                    <span  class="text-big">
+                                Связь с логистом <br> <a href="https://tlgg.ru/perevozkipro">Telegram</a> <a href=" https://wa.me/+79626815748">WhatsApp</a>
+                            </span>
+                </li>
+            </div>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" id="exampleModal2" role="document">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <span aria-hidden="true">×</span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title" id="myModalLabel2">Заказать обратный звонок</h4>
+            <div class="modal fade" id="modalForm" role="dialog" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Расчет стоимости перевозки</h4>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <p class="statusMsg"></p>
+                            <form role="form" id="modalContactForm">
+                                <h5>
+                                    Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
+                                    цен на топливо, погодных условий, состояния дорог на маршруте и тд.
+                                    <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
+                                </h5>
+                                <div class="form-group">
+                                    <label for="modalName"><strong>Адрес</strong></label>
+                                    <input class="form-control" id="modalName" name="modalName"
+                                           placeholder="Где будет погрузка и выгрузка: Санкт-Петербург - Астана" type="text" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="modalMessage"><strong>Подробности</strong></label>
+                                    <textarea class="form-control" id="modalMessage" name="modalMessage"
+                                              placeholder="Например: негабарит ширина 4,7м" autocomplete="off"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="modalPhone"><strong>Телефон</strong></label>
+                                    <input class="form-control" id="modalPhone" name="modalPhone"
+                                           placeholder="Ваш номер телефона для связи" type="number" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="modalEmail"><strong>Email</strong></label>
+                                    <input class="form-control" id="modalEmail" name="modalEmail" placeholder="Ваша эл. почта" type="email" autocomplete="off">
                                 </div>
 
-                                <div class="modal-body">
-                                    <form id="callForm">
-                                        <div class="form-group">
-                                            <label for="phone" class="col-form-label">Ваш номер:</label>
-                                            <input class="form-control" id="phone" name="phone"
-                                                   placeholder="Ваш номер телефона " type="number" autocomplete="off">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" id="submit2" class="btn btn-success btn-lg" style="background-color: darkcyan">Заказать звонок</button>
-                                </div>
-                            </div>
+                                <h5>
+                                    Специалист свяжется с Вами 30 минут для уточнения информации по грузу, либо с готовым предложением по перевозке.
+                                    <br><br>
+                                    Прямой заказ грузоперевозки по телефону 8 (812) 649-45-30
+                                    Запрос коммерческого предложения на почту info@перевозкипро.рф
+                                </h5>
+                            </form>
+                        </div>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" id="submit" class="btn btn-success btn-lg" >ОТПРАВИТЬ</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-7">
-                    <a data-target="#exampleModalCount" data-toggle="modal" class="btn btn-big btn-block" style="padding: 18px; font-size: 15px;" >
-                        <span>Заказать рассчет</span>
-                    </a>
+            </div>
 
-                    <div class="modal fade" id="exampleModalCount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" id="exampleModal2Count" role="document">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <span aria-hidden="true">×</span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title" id="myModalLabel2Count">Заказать рассчет</h4>
-                                </div>
+            <div class="col-md-12">
 
-                                <div class="modal-body">
-                                    <form id="callFormCount">
-                                        <h5>
-                                            Стоимость перевозки зависит от многих факторов: количества подходящих машин в районе перевозки,
-                                            цен на топливо, погодных условий, состояния дорог на маршруте и тд.
-                                            <br><br> Для точного расчета нам необходимо максимум данных о вашем грузе.
-                                        </h5>
-                                        <div class="form-group">
-                                            <label for="phoneCount" class="col-form-label">Ваш номер:</label>
-                                            <input class="form-control" id="phoneCount" name="phoneCount"
-                                                   placeholder="Ваш номер телефона " type="number" autocomplete="off">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="messageCount" class="col-form-label">Подробности: (тип груза, дата перевозки, адрес)</label>
-                                            <textarea class="form-control" id="messageCount" name="messageCount"
-                                                      placeholder="Например: грузоперевозка Шахай-Москва 16т" autocomplete="off"></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" id="submit2Count" class="btn btn-success btn-lg" style="background-color: darkcyan">Заказать рассчет</button>
-                                </div>
-                            </div>
+                <div class="row" style="font-size: large">
+                    <div class="col-md-5">
+                        <img src="../img/geography/china.png" alt=""/>
+                    </div><!-- .col-md-4 end -->
+
+                    <div class="col-md-7">
+                        <div class="custom-heading">
+                            <h2>Доставка грузов из Китая и стран Восточной Азии</h2>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12" style="text-align: center;">
-                    <h5>Доставим в Россию и СНГ. Выгодные цены. У нас индивидуальные скидки и подарки.</h5>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../img/geography/new/containers.jpg" alt=""  style="max-width:90%;"/>
-            </div>
-            <div class="col-md-6">
-                <h3>Способы перевозки:</h3>
+                        <p>Мы предлагаем  доставку грузов из Китая и стран Восточной Азии в Россию и обратно.</p>
 
-                <ul class="fa-ul" style="font-size: 18px">
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Морская перевозка (контейнером 20, 20HQ, 40, 40HQ)
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Автомобильная перевозка
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Сборным грузом
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Авиаперевозка
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Ж/Д доставка грузов
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Перевозка опасных грузов
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Мультимодальные грузоперевозки
-                    </li>
-                </ul><!-- .fa-ul end -->
-                <p style="font-size: 18px; padding-top: 22px"><strong>Выгодный маршрут. От двери до двери.</strong></p>
-                <p style="font-size: 18px"><strong>Свои склады и гарантия сохранности груза.</strong></p>
-                <p style="font-size: 18px"><strong>Доставка санкционных товаров с оформлением</strong></p>
-                <p style="font-size: 18px"><strong>Ввоз авто удобным маршрутом  в Россию и СНГ</strong></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Наши преимущества:</h3>
+                        <p>Способы перевозки из Китая, стран Восточной Азии и обратно <p>
 
-                <ul class="fa-ul" style="font-size: 18px">
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Грузоперевозки из Турции в Россию
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Оформим все необходимые документы
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Оформление необходимых разрешений
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Оформление сертификатов
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Осуществляем страхование грузов
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Охрана грузов
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Любая форма оплаты (нал, безнал, с НДС, без НДС)
-                    </li>
-                    <li>
-                        <i class="fa fa-li fa-long-arrow-right"></i>
-                        Обработка вашей заявки в день обращения
-                    </li>
-                </ul><!-- .fa-ul end -->
-            </div>
-            <div class="col-md-6">
-                <img src="../img/geography/new/tracks.jpg" style="max-width:75%;" alt=""/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="../img/geography/new/sklad.jpg" style="max-width:100%;" alt=""/>
-            </div>
-            <div class="col-md-6">
-                <h3>Безопасное хранение перевозки:</h3>
-                <p style="font-size: 18px; padding-top: 10px; bottom: 10px"><strong>
-                    Мы располагаем крупными складскими терминалами общей площадью в несколько тысяч квадратных метров. Предоставляемые помещения для ответственного хранения грузов оборудованы всеми системами безопасности, включая противопожарную и охранную, поэтому хранение грузов на складе абсолютно безопасно.
-                </strong></p>
-                <h3>Гарантии сохранности:</h3>
-                <p style="font-size: 18px; padding-top: 10px"><strong>
-                    За весь груз, поступающий к нам на временное хранение грузов, наша компания берет на себя полную ответственность и дает гарантии его сохранности. Дополнительно может быть оформлено страхование, которое обезопасит вас от любых форс-мажоров.                        </strong></p>
+                        <p>
+                            <strong>- В составе сборного груза</strong> <br>
+                            Виды перевозок сборным грузом:<br>
+                        <ul>
+                            <li>  <strong>Морская перевозка: </strong> Часто используется совместно с другими видами транспорта (мультимодальные перевозки)</li>
+                            <li>  <strong>Автомобильная перевозка:</strong>  Доставка от двери до двери
+                                Погрузка и выгрузка в удобное время и в удобном для вас месте</li>
+                        </ul>
+                        <p/>
+                        <p><strong>- Авиаперевозка  </strong><p/>
 
-            </div>
-        </div>
+                        <p><strong>- Индивидуальным контейнером (20, 40, 40HQ)</strong><br><p/>
+                        <p><strong>- Выделенным автомобилем ( машина доставляет груз от двери до двери)</strong><br><p/>
+
+                        </p>
+
+                    </div><!-- .col-md-5 end -->
+                </div><!-- .row end -->
+
+                <div class="row">
+
+                    <div class="col-md-12 custom-bkg bkg-light-blue">
+                        <div class="custom-heading">
+                            <h3>Наши преимущества</h3>
+                        </div><!-- .custom-heading end -->
+
+
+                        <ul class="fa-ul" style="font-size: x-large">
+
+                            <li>
+                                <i class="fa fa-li fa-long-arrow-right"></i>
+                                Грузоперевозки по территории Китая
+                            </li>
+
+                            <li>
+                                <i class="fa fa-li fa-long-arrow-right"></i>
+                                Осуществляем страхование грузов
+                            </li>
+
+                            <li>
+                                <i class="fa fa-li fa-long-arrow-right"></i>
+                                Любая форма оплаты (нал, безнал, с НДС, без НДС)
+                            </li>
+
+                            <li>
+                                <i class="fa fa-li fa-long-arrow-right"></i>
+                                Оформление необходимых разрешений
+                            </li>
+
+                            <li>
+                                <i class="fa fa-li fa-long-arrow-right"></i>
+                                Обработка вашей заявки в день обращения
+                            </li>
+
+
+                        </ul><!-- .fa-ul end -->
+                    </div><!-- .col-md-6 end -->
+                </div><!-- .row end -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="custom-heading">
+                            <h3>Другие сервисы</h3>
+                        </div><!-- .custom-heading end -->
+                    </div><!-- .col-md-12 end -->
+                </div><!-- .row end -->
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service-feature-box">
+                            <div class="service-media">
+                                <img src="../img/pics/img01.jpg" alt="Trucking"/>
+
+                                <a href="../overland-transportation.html" class="read-more02">
+                                            <span>
+                                                Подробнее
+                                                <i class="fa fa-chevron-right"></i>
+                                            </span>
+                                </a>
+                            </div><!-- .service-media end -->
+
+                            <div class="service-body">
+                                <div class="custom-heading">
+                                    <h4>Грузоперевозки автомобильным транспортом</h4>
+                                </div><!-- .custom-heading end -->
+                            </div><!-- .service-body end -->
+                        </div><!-- .service-feature-box-end -->
+                    </div><!-- .col-md-4 end -->
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service-feature-box">
+                            <div class="service-media">
+                                <img src="../img/pics/img02.jpg" alt="Trucking"/>
+
+                                <a href="../large-projects.html" class="read-more02">
+                                            <span>
+                                                Подробнее
+                                                <i class="fa fa-chevron-right"></i>
+                                            </span>
+                                </a>
+                            </div><!-- .service-media end -->
+
+                            <div class="service-body">
+                                <div class="custom-heading">
+                                    <h4>Крупные проекты</h4>
+                                </div><!-- .custom-heading end -->
+                            </div><!-- .service-body end -->
+                        </div><!-- .service-feature-box-end -->
+                    </div><!-- .col-md-4 end -->
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="service-feature-box">
+                            <div class="service-media">
+                                <img src="../img/pics/img03.jpg" alt="Trucking"/>
+
+                                <a href="../air-freight.html" class="read-more02">
+                                            <span>
+                                                Read more
+                                                <i class="fa fa-chevron-right"></i>
+                                            </span>
+                                </a>
+                            </div><!-- .service-media end -->
+
+                            <div class="service-body">
+                                <div class="custom-heading">
+                                    <h4>Воздушные грузоперевозки</h4>
+                                </div><!-- .custom-heading end -->
+                            </div><!-- .service-body end -->
+                        </div><!-- .service-feature-box-end -->
+                    </div><!-- .col-md-4 end -->
+                </div><!-- .row end -->
+            </div><!-- .col-md-9 end -->
+        </div><!-- .row end -->
     </div><!-- .container end -->
 </div><!-- .page-content end -->
 
@@ -512,6 +575,34 @@
 <!--Jquery validator-->
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#formNegabarit').validate({
+            rules: {
+                inputDate: {required: '#inputDate:visible'},
+                inputType: {required: '#inputType:visible'}
+            },
+            messages: {
+                inputDate: "Поле не заполнено",
+                inputType: "Поле не заполнено"
+            }
+        });
+        $('#modalContactForm').validate({
+            rules: {
+                modalName: {required: '#modalName:visible'},
+                modalEmail: {required: '#modalEmail:visible'},
+                modalMessage: {required: '#modalMessage:visible'},
+                modalPhone: {required: '#modalPhone:visible'}
+            },
+            messages: {
+                modalName: "Поле не заполнено",
+                modalEmail: "Поле заполнено не верно",
+                modalMessage: "Поле не заполнено",
+                modalPhone: "Поле не заполнено"
+            }
+        });
+    });
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -528,69 +619,48 @@
     });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/44801335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<script>
-    $(document).ready(function() {
-        $('#callForm').validate({
-            rules: {
-                phone: {required: '#phone:visible'}
-            },
-            messages: {
-                phone: "Поле не заполнено"
-            }
-        });
-
-        $('#callFormCount').validate({
-            rules: {
-                phoneCount: {required: '#phoneCount:visible'},
-                messageCount: {required: '#messageCount:visible'}
-            },
-            messages: {
-                phoneCount: "Поле не заполнено",
-                messageCount: "Поле не заполнено"
-            }
-        });
-    });
+<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + "//yandex.mightycall.ru/c2c/js/MightyCallC2C_5.4.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='" + "//mightycallstorage.blob.core.windows.net/c2cjss/c6aa7d01-79bd-433b-9d58-0707238a4b40.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
+<script type="text/javascript">
+    InitClick2Call();
+</script>
 <script>
-    $('#submit2').click(function(){
-        var form = $( "#callForm" );
+    $('#submit').click(function(){
+        var form = $( "#modalContactForm" );
         if (form.valid()){
-            var phone=$('#phone').val()
-            var form_data = new Array({
-                'message': '(from turkey) no message',
-                'phone': phone
-            });
-            $.ajax({
-                type: 'POST',
-                url: "contact.php",
-                data: ({'action': 'callForm', 'form_data': form_data})
-            }).done(function (data) {
-                alert(data);
-                $('#exampleModal2').fadeOut();
-            });
-        }
-    });
+            var modalName=$('#modalName').val();
+            var modalEmail=$('#modalEmail').val();
+            var modalMessage=$('#modalMessage').val();
+            var modalPhone=$('#modalPhone').val();
+            var date=$('#inputDate').val();
+            var type=$('#inputType').val();
 
-    $('#submit2Count').click(function(){
-        var form = $( "#callFormCount" );
-        if (form.valid()){
-            var message=$('#messageCount').val();
-            var phone=$('#phoneCount').val()
-            var form_data = new Array({
-                'message': '(from turkey) from count: ' + message,
-                'phone': phone
-            });
+            var inputWedth = $('#inputWedth').is(":checked");
+            var inputLanding=$('#inputLanding').is(":checked");
+
+            var form_data = new Array({'modalName': modalName, 'modalEmail': modalEmail, 'modalPhone': modalPhone,
+                'modalMessage': modalMessage, 'date':date, 'type': type, 'inputWedth':inputWedth, 'inputLanding': inputLanding});
             $.ajax({
                 type: 'POST',
                 url: "contact.php",
-                data: ({'action': 'callForm', 'form_data': form_data})
+                data: ({'action': 'negabarit', 'form_data': form_data})
             }).done(function (data) {
                 alert(data);
-                $('#exampleModal2Count').fadeOut();
+                if (data=='Сообщение успешно отправлено.'){
+                    $('#formNegabarit').submit();
+                }
             });
         }
     });
+    function validateForm(){
+        var form = $( "#formNegabarit" );
+        if (form.valid()){
+            $( "#modalButton" ).click();
+        }
+    }
 </script>
 
 </body>
