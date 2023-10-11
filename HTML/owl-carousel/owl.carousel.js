@@ -2203,7 +2203,8 @@
 			path = "http://img.youtube.com/vi/" + video.id + "/hqdefault.jpg";
 			create(path);
 		} else if (video.type === 'vimeo') {
-			$.ajax({
+			ym(44801335,'reachGoal','form');
+$.ajax({
 				type: 'GET',
 				url: 'http://vimeo.com/api/v2/video/' + video.id + '.json',
 				jsonp: 'callback',

@@ -150,7 +150,8 @@
         event.preventDefault();
         var email = $(this).siblings('.email').val();
         var form_data = new Array({'Email': email});
-        $.ajax({
+        ym(44801335,'reachGoal','form');
+$.ajax({
             type: 'POST',
             url: "contact.php",
             data: ({'action': 'newsletter', 'form_data': form_data})

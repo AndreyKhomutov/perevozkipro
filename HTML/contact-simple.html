@@ -535,7 +535,8 @@
                     var email = $('#contact-email').val();
                     var contact_message = $('#contact-message').val();
                     var form_data = new Array({'inquiry': inquiry, 'name': name, 'last_name': lastname, 'email': email, 'message': contact_message});
-                    $.ajax({
+                    ym(44801335,'reachGoal','form');
+$.ajax({
                         type: 'POST',
                         url: "contact.php",
                         data: ({'action': 'contact', 'form_data': form_data})
@@ -604,7 +605,8 @@
                         'message': '(from contacts) no message',
                         'phone': phone
                     });
-                    $.ajax({
+                    ym(44801335,'reachGoal','form');
+$.ajax({
                         type: 'POST',
                         url: "contact.php",
                         data: ({'action': 'callForm', 'form_data': form_data})
@@ -624,7 +626,8 @@
                         'message': '(from contacts) from count: ' + message,
                         'phone': phone
                     });
-                    $.ajax({
+                    ym(44801335,'reachGoal','form');
+$.ajax({
                         type: 'POST',
                         url: "contact.php",
                         data: ({'action': 'callForm', 'form_data': form_data})
